@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns</title>
+    <style>
+        pre, code {
+            font-family: monospace;
+            font-size: 16px;
+        }
+        b {
+            font-weight: bold;
+        }
+        table {
+        border-collapse: collapse;
+        border: 3px solid #333;
+        }
+        td {
+            padding: 4px;
+            text-align: left;
+            border: 1px solid #888;
+        }
+        tr.divider td {
+            border-top: 3px solid #333;
+            padding: 0;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+<select onchange="window.location.href=this.value;">
+  <option value="goal25.html" selected>Append ((2 -&gt; B) (1 -&gt; B)) to ((3 -&gt; C) (1 -&gt; A) (2 -&gt; C) (1 -&gt; C)) --&gt; <b>@inter</b></option>
+  <option value="goal24.html#:~:text=Append%20%40rest%20to%20%40x%20--%3e%20%40inter">Append ((1 -&gt; C) (2 -&gt; B) (1 -&gt; B)) to ((3 -&gt; C) (1 -&gt; A) (2 -&gt; C) (1 -&gt; C)) --&gt; <b>@result</b></option>
+  <option value="goal1.html#:~:text=Append%20%40frontEnd%20to%20%28%28%40largest%20-%3e%20%40end%29%20%7c%20%40backEnd%29%20--%3e%20%40path">Towers of Hanoi (3 2 1) from A to C through B --&gt; <b>@result</b></option>
+</select>
+<pre><code>
+Append (<b>@head</b> | <b>@rest</b>) to <b>@x</b> --&gt; (<b>@head</b> | <b>@inter</b>)
+	<a href="goal26.html">Append <b>@rest</b> to <b>@x</b> --&gt; <b>@inter</b></a>
+
+<table>
+    <tbody id="tableBody">
+        <tr>
+            <td><b>@inter</b></td>
+            <td>((2 -&gt; B) (1 -&gt; B) (3 -&gt; C) (1 -&gt; A) (2 -&gt; C) (1 -&gt; C))</td>
+        </tr>
+        <tr class="divider">
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td><b>@head</b></td>
+            <td><a href="goal2.html#:~:text=%28%40largest%20-%3e%20%40end%29">(2 -&gt; B)</a></td>
+        </tr>
+        <tr>
+            <td><b>@rest</b></td>
+            <td><a href="goal7.html#:~:text=%28%28%40largest%20-%3e%20%40end%29%20%7c%20%40backEnd%29">((1 -&gt; B))</a></td>
+        </tr>
+        <tr>
+            <td><b>@x</b></td>
+            <td><a href="goal1.html#:~:text=%28%28%40largest%20-%3e%20%40end%29%20%7c%20%40backEnd%29">((3 -&gt; C) (1 -&gt; A) (2 -&gt; C) (1 -&gt; C))</a></td>
+        </tr>
+        <tr>
+            <td><a href="goal26.html"><b>@inter</b></a></td>
+            <td><a href="goal26.html#:~:text=%28%40head%20%7c%20%40inter%29">((1 -&gt; B) (3 -&gt; C) (1 -&gt; A) (2 -&gt; C) (1 -&gt; C))</a></td>
+        </tr>
+    </tbody>
+</table>
+<a href="context1.html">Context</a>&nbsp;&nbsp;<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal24.html">&lt</a>&nbsp;&nbsp;<a href="goal25.html">||</a>&nbsp;&nbsp;<a href="goal26.html">&gt</a>&nbsp;&nbsp;<a href="goal27.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+</body>
+</html>

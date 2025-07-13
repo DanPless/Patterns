@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal11.html" selected>Append ((1 -&gt; C)) to ((2 -&gt; B) (1 -&gt; B)) --&gt; <b>@frontEnd</b></option>
+  <option style="white-space: nowrap;" value="goal2.html#:~:text=Append%20%40frontEnd%20to%20%28%28%40largest%20-%3e%20%40end%29%20%7c%20%40backEnd%29%20--%3e%20%40path">Towers of Hanoi (2 1) from A to B through C --&gt; <b>@frontEnd</b></option>
+  <option style="white-space: nowrap;" value="goal1.html#:~:text=Towers%20of%20Hanoi%20%40rest%20from%20%40start%20to%20%40middle%20through%20%40end%20--%3e%20%40frontEnd">Towers of Hanoi (3 2 1) from A to C through B --&gt; <b>@result</b></option>
+</select>
+<pre><code>
+Append (<b>@head</b> | <b>@rest</b>) to <b>@x</b> --&gt; (<b>@head</b> | <b>@inter</b>)
+	<a href="goal12.html">Append <b>@rest</b> to <b>@x</b> --&gt; <b>@inter</b></a>
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><b>@frontEnd</b></td>
+			<td>
+				<details>
+					<Summary>(1 -&gt; C) (2 -&gt; B) (1 -&gt; B)</Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal3.html#:~:text=%40largest%20-%3e%20%40end">1 -&gt; C</a></Summary>
+							<ul>
+								<li>
+								1
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%40largest%20-%3e%20%40end">2 -&gt; B</a></Summary>
+							<ul>
+								<li>
+								2
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal7.html#:~:text=%40largest%20-%3e%20%40end">1 -&gt; B</a></Summary>
+							<ul>
+								<li>
+								1
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@head</b></td>
+			<td>
+				<details>
+					<Summary><a href="goal3.html#:~:text=%40largest%20-%3e%20%40end">1 -&gt; C</a></Summary>
+					<ul>
+						<li>
+						1
+						</li>
+						<li>
+						-&gt;
+						</li>
+						<li>
+						C
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@rest</b></td>
+			<td>
+()			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+				<details>
+					<Summary><a href="goal2.html#:~:text=%28%40largest%20-%3e%20%40end%29%20%7c%20%40backEnd">(2 -&gt; B) (1 -&gt; B)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%40largest%20-%3e%20%40end">2 -&gt; B</a></Summary>
+							<ul>
+								<li>
+								2
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal7.html#:~:text=%40largest%20-%3e%20%40end">1 -&gt; B</a></Summary>
+							<ul>
+								<li>
+								1
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a href="goal12.html"><b>@inter</b></a></td>
+			<td>
+				<details>
+					<Summary><a href="goal2.html#:~:text=%28%40largest%20-%3e%20%40end%29%20%7c%20%40backEnd">(2 -&gt; B) (1 -&gt; B)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%40largest%20-%3e%20%40end">2 -&gt; B</a></Summary>
+							<ul>
+								<li>
+								2
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal7.html#:~:text=%40largest%20-%3e%20%40end">1 -&gt; B</a></Summary>
+							<ul>
+								<li>
+								1
+								</li>
+								<li>
+								-&gt;
+								</li>
+								<li>
+								B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context1.html">Context</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal10.html">&lt</a>&nbsp;&nbsp;<a href="goal11.html">||</a>&nbsp;&nbsp;<a href="goal12.html">&gt</a>&nbsp;&nbsp;<a href="goal12.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

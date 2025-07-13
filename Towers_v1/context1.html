@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<pre><code>Towers of Hanoi () from <b>@</b> to <b>@</b> through <b>@</b> --&gt; ()
+Towers of Hanoi (<b>@largest</b> | <b>@rest</b>) from <b>@start</b> to <b>@end</b> through <b>@middle</b> --&gt; <b>@path</b>
+	Towers of Hanoi <b>@rest</b> from <b>@start</b> to <b>@middle</b> through <b>@end</b> --&gt; <b>@frontEnd</b>
+	Towers of Hanoi <b>@rest</b> from <b>@middle</b> to <b>@end</b> through <b>@start</b> --&gt; <b>@backEnd</b>
+	Append <b>@frontEnd</b> to ((<b>@largest</b> -&gt; <b>@end</b>) | <b>@backEnd</b>) --&gt; <b>@path</b>
+Append () to <b>@x</b> --&gt; <b>@x</b>
+Append (<b>@head</b> | <b>@rest</b>) to <b>@x</b> --&gt; (<b>@head</b> | <b>@inter</b>)
+	Append <b>@rest</b> to <b>@x</b> --&gt; <b>@inter</b>
+||| ()
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

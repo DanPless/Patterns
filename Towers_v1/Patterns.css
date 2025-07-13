@@ -1,0 +1,59 @@
+pre, code {
+    font-family: monospace;
+    font-size: 16px;
+    margin-left: 6px;
+}
+b {
+    font-weight: bold;
+}
+table {
+border-collapse: collapse;
+border: 3px solid #333;
+}
+td {
+    padding: 4px;
+    text-align: left;
+    border: 1px solid #888;
+    list-style: none;
+}
+tr.divider td {
+    border-top: 3px solid #333;
+    padding: 0 0 0 0;
+    height: 0 0 0 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    margin-left: 0.85em; /* or 1.2em for more space */
+    padding: 0;
+}
+details {
+    margin: 0;
+    padding: 0;
+}
+/*— hide the original <select> once SlimSelect has enhanced it —*/
+select[data-ssid] {
+  pointer-events: none;
+  opacity: 0;
+  display: block !important;
+  position: absolute;
+} /* hides the underlying select element :contentReference[oaicite:2]{index=2} */
+
+/*— ensure each dropdown item stays on one line —*/
+.ss-list li {
+  white-space: nowrap;
+} /* uses SlimSelect’s list class :contentReference[oaicite:3]{index=3} */
+
+/*— let the dropdown panel grow to fit its content —*/
+.ss-content {
+  width: max-content;
+} /* SlimSelect’s content wrapper :contentReference[oaicite:4]{index=4} */
+
+/*— match your original font, height, and padding —*/
+.ss-main .ss-single-selected {
+  font-family: monospace;
+  font-size:    16px;
+  height:       32px;
+  line-height:  32px;
+  padding:      5px;
+}

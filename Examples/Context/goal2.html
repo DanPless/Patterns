@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal2.html" selected>Get <b>@list</b></option>
+  <option style="white-space: nowrap;" value="goal1.html#:~:text=Get%20%40context">Get context -&gt; <b>@list</b></option>
+</select>
+<pre><code>
+Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>))
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><b>@list</b></td>
+			<td>
+				<details>
+					<Summary>((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>)</Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary>(Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Get context -&gt; <b>@context</b></Summary>
+									<ul>
+										<li>
+											Get
+										</li>
+										<li>
+											context
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@context</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Get <b>@context</b></Summary>
+											<ul>
+												<li>
+													Get
+												</li>
+												<li>
+													<b>@context</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary>(Get <b>@end</b>) | <b>@</b></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary>Get <b>@end</b></Summary>
+													<ul>
+														<li>
+															Get
+														</li>
+														<li>
+															<b>@end</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary>(Get <b>@</b>) <b>@</b></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary>Get <b>@</b></Summary>
+													<ul>
+														<li>
+															Get
+														</li>
+														<li>
+															<b>@</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+													<b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@end</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Append () to <b>@x</b> -&gt; <b>@x</b></Summary>
+									<ul>
+										<li>
+											Append
+										</li>
+										<li>
+											()
+										</li>
+										<li>
+											to
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)</Summary>
+									<ul>
+										<li>
+											Append
+										</li>
+										<li>
+										<details>
+											<Summary><b>@head</b> | <b>@tail</b></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											to
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+										<details>
+											<Summary><b>@head</b> | <b>@inter</b></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@inter</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b></Summary>
+											<ul>
+												<li>
+													Append
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													to
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@inter</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Not | <b>@predicate</b></Summary>
+									<ul>
+										<li>
+											Not
+										</li>
+										<li>
+| <b>@predicate</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><b>@predicate</b> | <b>@</b></Summary>
+									<ul>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+									<b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Not | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Not | <b>@</b></Summary>
+									<ul>
+										<li>
+											Not
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>One way match of <b>@template</b> -&gt; <b>@pattern</b></Summary>
+									<ul>
+										<li>
+											One
+										</li>
+										<li>
+											way
+										</li>
+										<li>
+											match
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+											<b>@template</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@pattern</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)</Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Match <b>@pattern</b></Summary>
+											<ul>
+												<li>
+													Match
+												</li>
+												<li>
+													<b>@pattern</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary>(Match <b>@template</b>) | <b>@</b></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary>Match <b>@template</b></Summary>
+													<ul>
+														<li>
+															Match
+														</li>
+														<li>
+															<b>@template</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Is variable <b>@v</b></Summary>
+									<ul>
+										<li>
+											Is
+										</li>
+										<li>
+											variable
+										</li>
+										<li>
+											<b>@v</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(One way match of <b>@v</b> -&gt; ()) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>One way match of <b>@v</b> -&gt; ()</Summary>
+											<ul>
+												<li>
+													One
+												</li>
+												<li>
+													way
+												</li>
+												<li>
+													match
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@v</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													()
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(One way match of <b>@v</b> -&gt; (())) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>One way match of <b>@v</b> -&gt; (())</Summary>
+											<ul>
+												<li>
+													One
+												</li>
+												<li>
+													way
+												</li>
+												<li>
+													match
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@v</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+												<details>
+													<Summary>()</Summary>
+													<ul>
+														<li>
+															()
+														</li>
+													</ul>
+												</details>
+
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Element <b>@x</b> of (<b>@x</b> | <b>@</b>)</Summary>
+									<ul>
+										<li>
+											Element
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+										<details>
+											<Summary><b>@x</b> | <b>@</b></Summary>
+											<ul>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)</Summary>
+									<ul>
+										<li>
+											Element
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+										<details>
+											<Summary><b>@</b> | <b>@tail</b></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(Element <b>@x</b> of <b>@tail</b>) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Element <b>@x</b> of <b>@tail</b></Summary>
+											<ul>
+												<li>
+													Element
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Find all <b>@</b> in () where <b>@</b> -&gt; ()</Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+											()
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											()
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)</Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><b>@head</b> | <b>@tail</b></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+										<details>
+											<Summary><b>@head</b> | <b>@tail2</b></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Try <b>@head</b></Summary>
+											<ul>
+												<li>
+													Try
+												</li>
+												<li>
+													<b>@head</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary>(Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary>Try <b>@x</b></Summary>
+													<ul>
+														<li>
+															Try
+														</li>
+														<li>
+															<b>@x</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+												<details>
+													<Summary><b>@predicate</b> | <b>@</b></Summary>
+													<ul>
+														<li>
+															<b>@predicate</b>
+														</li>
+														<li>
+| <b>@</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+									<b>@</b>
+								</li>
+								<li>
+								<details>
+									<Summary>(Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></Summary>
+											<ul>
+												<li>
+													Find
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													where
+												</li>
+												<li>
+													<b>@predicate</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><b>@</b> | <b>@tail</b></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@tail2</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></Summary>
+											<ul>
+												<li>
+													Find
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													where
+												</li>
+												<li>
+													<b>@predicate</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b></Summary>
+									<ul>
+										<li>
+											For
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@element</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><b>@element</b> | <b>@</b></Summary>
+											<ul>
+												<li>
+													<b>@element</b>
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											try
+										</li>
+										<li>
+| <b>@goal</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><b>@goal</b> | <b>@</b></Summary>
+									<ul>
+										<li>
+											<b>@goal</b>
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>(For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary>For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b></Summary>
+									<ul>
+										<li>
+											For
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@element</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><b>@</b> | <b>@rest</b></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@rest</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											try
+										</li>
+										<li>
+| <b>@goal</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary>(For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary>For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b></Summary>
+											<ul>
+												<li>
+													For
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@element</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@rest</b>
+												</li>
+												<li>
+													try
+												</li>
+												<li>
+| <b>@goal</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context2.html">Context</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal1.html">&lt</a>&nbsp;&nbsp;<a href="goal2.html">||</a>&nbsp;&nbsp;&gt&nbsp;&nbsp;|&gt&nbsp;&nbsp;&gt&gt
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

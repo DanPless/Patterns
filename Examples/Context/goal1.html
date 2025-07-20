@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal1.html" selected>Get context -&gt; <b>@list</b></option>
+</select>
+<pre><code>
+Get context -&gt; <b>@context</b>
+	<a href="goal2.html">Get <b>@context</b></a>
+		Get <b>@end</b>
+		Get <b>@</b>
+			|| <b>@</b>
+			||| ()
+		||| <b>@end</b>
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><a href="goal2.html"><b>@list</b></a></td>
+			<td>
+				<details>
+					<Summary><a href="goal2.html#:~:text=%09%28%28Get%20context%20-%3e%20%40context%29%20%28%28Get%20%40context%29%20%28%28Get%20%40end%29%20%7c%20%40%29%20%28%28Get%20%40%29%20%40%29%20%7c%20%40end%29%20%7c%20%40%29%20%7c%20%40">((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Get%20context%20-%3e%20%40context%29%20%28%28Get%20%40context%29%20%28%28Get%20%40end%29%20%7c%20%40%29%20%28%28Get%20%40%29%20%40%29%20%7c%20%40end%29%20%7c%20%40">(Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Get%20context%20-%3e%20%40context">Get context -&gt; <b>@context</b></a></Summary>
+									<ul>
+										<li>
+											Get
+										</li>
+										<li>
+											context
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@context</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Get%20%40context%29%20%28%28Get%20%40end%29%20%7c%20%40%29%20%28%28Get%20%40%29%20%40%29%20%7c%20%40end">(Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Get%20%40context">Get <b>@context</b></a></Summary>
+											<ul>
+												<li>
+													Get
+												</li>
+												<li>
+													<b>@context</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Get%20%40end%29%20%7c%20%40">(Get <b>@end</b>) | <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Get%20%40end">Get <b>@end</b></a></Summary>
+													<ul>
+														<li>
+															Get
+														</li>
+														<li>
+															<b>@end</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Get%20%40%29%20%40">(Get <b>@</b>) <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Get%20%40">Get <b>@</b></a></Summary>
+													<ul>
+														<li>
+															Get
+														</li>
+														<li>
+															<b>@</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+													<b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@end</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Append%20%28%29%20to%20%40x%20-%3e%20%40x%29%20%7c%20%40">(Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Append%20%28%29%20to%20%40x%20-%3e%20%40x">Append () to <b>@x</b> -&gt; <b>@x</b></a></Summary>
+									<ul>
+										<li>
+											Append
+										</li>
+										<li>
+											()
+										</li>
+										<li>
+											to
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Append%20%28%40head%20%7c%20%40tail%29%20to%20%40x%20-%3e%20%28%40head%20%7c%20%40inter%29%29%20%28%28Append%20%40tail%20to%20%40x%20-%3e%20%40inter%29%20%7c%20%40%29%20%7c%20%40">(Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Append%20%28%40head%20%7c%20%40tail%29%20to%20%40x%20-%3e%20%28%40head%20%7c%20%40inter%29">Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)</a></Summary>
+									<ul>
+										<li>
+											Append
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40tail"><b>@head</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											to
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40inter"><b>@head</b> | <b>@inter</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@inter</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Append%20%40tail%20to%20%40x%20-%3e%20%40inter%29%20%7c%20%40">(Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Append%20%40tail%20to%20%40x%20-%3e%20%40inter">Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b></a></Summary>
+											<ul>
+												<li>
+													Append
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													to
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@inter</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Not%20%7c%20%40predicate%29%20%28%40predicate%20%7c%20%40%29%20%40">(Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Not%20%7c%20%40predicate">Not | <b>@predicate</b></a></Summary>
+									<ul>
+										<li>
+											Not
+										</li>
+										<li>
+| <b>@predicate</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%40predicate%20%7c%20%40"><b>@predicate</b> | <b>@</b></a></Summary>
+									<ul>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+									<b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Not%20%7c%20%40%29%20%7c%20%40">(Not | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Not%20%7c%20%40">Not | <b>@</b></a></Summary>
+									<ul>
+										<li>
+											Not
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28One%20way%20match%20of%20%40template%20-%3e%20%40pattern%29%20%28%28Match%20%40pattern%29%20%28%28Match%20%40template%29%20%7c%20%40%29%29%20%7c%20%40">(One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09One%20way%20match%20of%20%40template%20-%3e%20%40pattern">One way match of <b>@template</b> -&gt; <b>@pattern</b></a></Summary>
+									<ul>
+										<li>
+											One
+										</li>
+										<li>
+											way
+										</li>
+										<li>
+											match
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+											<b>@template</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@pattern</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Match%20%40pattern%29%20%28%28Match%20%40template%29%20%7c%20%40%29">(Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)</a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Match%20%40pattern">Match <b>@pattern</b></a></Summary>
+											<ul>
+												<li>
+													Match
+												</li>
+												<li>
+													<b>@pattern</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Match%20%40template%29%20%7c%20%40">(Match <b>@template</b>) | <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Match%20%40template">Match <b>@template</b></a></Summary>
+													<ul>
+														<li>
+															Match
+														</li>
+														<li>
+															<b>@template</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Is%20variable%20%40v%29%20%28%28One%20way%20match%20of%20%40v%20-%3e%20%28%29%29%20%7c%20%40%29%20%28%28One%20way%20match%20of%20%40v%20-%3e%20%28%28%29%29%29%20%7c%20%40%29%20%7c%20%40">(Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Is%20variable%20%40v">Is variable <b>@v</b></a></Summary>
+									<ul>
+										<li>
+											Is
+										</li>
+										<li>
+											variable
+										</li>
+										<li>
+											<b>@v</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28One%20way%20match%20of%20%40v%20-%3e%20%28%29%29%20%7c%20%40">(One way match of <b>@v</b> -&gt; ()) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09One%20way%20match%20of%20%40v%20-%3e%20%28%29">One way match of <b>@v</b> -&gt; ()</a></Summary>
+											<ul>
+												<li>
+													One
+												</li>
+												<li>
+													way
+												</li>
+												<li>
+													match
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@v</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													()
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28One%20way%20match%20of%20%40v%20-%3e%20%28%28%29%29%29%20%7c%20%40">(One way match of <b>@v</b> -&gt; (())) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09One%20way%20match%20of%20%40v%20-%3e%20%28%28%29%29">One way match of <b>@v</b> -&gt; (())</a></Summary>
+											<ul>
+												<li>
+													One
+												</li>
+												<li>
+													way
+												</li>
+												<li>
+													match
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@v</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+												<details>
+													<Summary>()</Summary>
+													<ul>
+														<li>
+															()
+														</li>
+													</ul>
+												</details>
+
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Element%20%40x%20of%20%28%40x%20%7c%20%40%29%29%20%7c%20%40">(Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Element%20%40x%20of%20%28%40x%20%7c%20%40%29">Element <b>@x</b> of (<b>@x</b> | <b>@</b>)</a></Summary>
+									<ul>
+										<li>
+											Element
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40x%20%7c%20%40"><b>@x</b> | <b>@</b></a></Summary>
+											<ul>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Element%20%40x%20of%20%28%40%20%7c%20%40tail%29%29%20%28%28Element%20%40x%20of%20%40tail%29%20%7c%20%40%29%20%7c%20%40">(Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Element%20%40x%20of%20%28%40%20%7c%20%40tail%29">Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)</a></Summary>
+									<ul>
+										<li>
+											Element
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40%20%7c%20%40tail"><b>@</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Element%20%40x%20of%20%40tail%29%20%7c%20%40">(Element <b>@x</b> of <b>@tail</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Element%20%40x%20of%20%40tail">Element <b>@x</b> of <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													Element
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40%20in%20%28%29%20where%20%40%20-%3e%20%28%29%29%20%7c%20%40">(Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40%20in%20%28%29%20where%20%40%20-%3e%20%28%29">Find all <b>@</b> in () where <b>@</b> -&gt; ()</a></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+											()
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											()
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40x%20in%20%28%40head%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%28%40head%20%7c%20%40tail2%29%29%20%28%28Try%20%40head%29%20%28%28Try%20%40x%29%20%28%40predicate%20%7c%20%40%29%20%7c%20%40%29%20%7c%20%40%29%20%40%20%28%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40%29%20%7c%20%40">(Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40x%20in%20%28%40head%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%28%40head%20%7c%20%40tail2%29">Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)</a></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40tail"><b>@head</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40tail2"><b>@head</b> | <b>@tail2</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Try%20%40head%29%20%28%28Try%20%40x%29%20%28%40predicate%20%7c%20%40%29%20%7c%20%40%29%20%7c%20%40">(Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Try%20%40head">Try <b>@head</b></a></Summary>
+											<ul>
+												<li>
+													Try
+												</li>
+												<li>
+													<b>@head</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Try%20%40x%29%20%28%40predicate%20%7c%20%40%29%20%7c%20%40">(Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Try%20%40x">Try <b>@x</b></a></Summary>
+													<ul>
+														<li>
+															Try
+														</li>
+														<li>
+															<b>@x</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09%40predicate%20%7c%20%40"><b>@predicate</b> | <b>@</b></a></Summary>
+													<ul>
+														<li>
+															<b>@predicate</b>
+														</li>
+														<li>
+| <b>@</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+									<b>@</b>
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40">(Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a></Summary>
+											<ul>
+												<li>
+													Find
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													where
+												</li>
+												<li>
+													<b>@predicate</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40%20in%20%28%40%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%40tail2%29%20%28%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40%29%20%7c%20%40">(Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40%20in%20%28%40%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b></a></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40%20%7c%20%40tail"><b>@</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@tail2</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40">(Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a></Summary>
+											<ul>
+												<li>
+													Find
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													where
+												</li>
+												<li>
+													<b>@predicate</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28For%20all%20%40element%20in%20%28%40element%20%7c%20%40%29%20try%20%7c%20%40goal%29%20%28%40goal%20%7c%20%40%29%20%7c%20%40">(For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09For%20all%20%40element%20in%20%28%40element%20%7c%20%40%29%20try%20%7c%20%40goal">For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b></a></Summary>
+									<ul>
+										<li>
+											For
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@element</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40element%20%7c%20%40"><b>@element</b> | <b>@</b></a></Summary>
+											<ul>
+												<li>
+													<b>@element</b>
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											try
+										</li>
+										<li>
+| <b>@goal</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%40goal%20%7c%20%40"><b>@goal</b> | <b>@</b></a></Summary>
+									<ul>
+										<li>
+											<b>@goal</b>
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28For%20all%20%40element%20in%20%28%40%20%7c%20%40rest%29%20try%20%7c%20%40goal%29%20%28%28For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal%29%20%7c%20%40%29%20%7c%20%40">(For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09For%20all%20%40element%20in%20%28%40%20%7c%20%40rest%29%20try%20%7c%20%40goal">For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b></a></Summary>
+									<ul>
+										<li>
+											For
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@element</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40%20%7c%20%40rest"><b>@</b> | <b>@rest</b></a></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@rest</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											try
+										</li>
+										<li>
+| <b>@goal</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal%29%20%7c%20%40">(For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b></a></Summary>
+											<ul>
+												<li>
+													For
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@element</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@rest</b>
+												</li>
+												<li>
+													try
+												</li>
+												<li>
+| <b>@goal</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@context</b></td>
+			<td>
+				<details>
+					<Summary><a href="goal2.html#:~:text=%09%28%28Get%20context%20-%3e%20%40context%29%20%28%28Get%20%40context%29%20%28%28Get%20%40end%29%20%7c%20%40%29%20%28%28Get%20%40%29%20%40%29%20%7c%20%40end%29%20%7c%20%40%29%20%7c%20%40">((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Get%20context%20-%3e%20%40context%29%20%28%28Get%20%40context%29%20%28%28Get%20%40end%29%20%7c%20%40%29%20%28%28Get%20%40%29%20%40%29%20%7c%20%40end%29%20%7c%20%40">(Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Get%20context%20-%3e%20%40context">Get context -&gt; <b>@context</b></a></Summary>
+									<ul>
+										<li>
+											Get
+										</li>
+										<li>
+											context
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@context</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Get%20%40context%29%20%28%28Get%20%40end%29%20%7c%20%40%29%20%28%28Get%20%40%29%20%40%29%20%7c%20%40end">(Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Get%20%40context">Get <b>@context</b></a></Summary>
+											<ul>
+												<li>
+													Get
+												</li>
+												<li>
+													<b>@context</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Get%20%40end%29%20%7c%20%40">(Get <b>@end</b>) | <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Get%20%40end">Get <b>@end</b></a></Summary>
+													<ul>
+														<li>
+															Get
+														</li>
+														<li>
+															<b>@end</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Get%20%40%29%20%40">(Get <b>@</b>) <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Get%20%40">Get <b>@</b></a></Summary>
+													<ul>
+														<li>
+															Get
+														</li>
+														<li>
+															<b>@</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+													<b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@end</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Append%20%28%29%20to%20%40x%20-%3e%20%40x%29%20%7c%20%40">(Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Append%20%28%29%20to%20%40x%20-%3e%20%40x">Append () to <b>@x</b> -&gt; <b>@x</b></a></Summary>
+									<ul>
+										<li>
+											Append
+										</li>
+										<li>
+											()
+										</li>
+										<li>
+											to
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Append%20%28%40head%20%7c%20%40tail%29%20to%20%40x%20-%3e%20%28%40head%20%7c%20%40inter%29%29%20%28%28Append%20%40tail%20to%20%40x%20-%3e%20%40inter%29%20%7c%20%40%29%20%7c%20%40">(Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Append%20%28%40head%20%7c%20%40tail%29%20to%20%40x%20-%3e%20%28%40head%20%7c%20%40inter%29">Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)</a></Summary>
+									<ul>
+										<li>
+											Append
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40tail"><b>@head</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											to
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40inter"><b>@head</b> | <b>@inter</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@inter</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Append%20%40tail%20to%20%40x%20-%3e%20%40inter%29%20%7c%20%40">(Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Append%20%40tail%20to%20%40x%20-%3e%20%40inter">Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b></a></Summary>
+											<ul>
+												<li>
+													Append
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													to
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@inter</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Not%20%7c%20%40predicate%29%20%28%40predicate%20%7c%20%40%29%20%40">(Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Not%20%7c%20%40predicate">Not | <b>@predicate</b></a></Summary>
+									<ul>
+										<li>
+											Not
+										</li>
+										<li>
+| <b>@predicate</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%40predicate%20%7c%20%40"><b>@predicate</b> | <b>@</b></a></Summary>
+									<ul>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+									<b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Not%20%7c%20%40%29%20%7c%20%40">(Not | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Not%20%7c%20%40">Not | <b>@</b></a></Summary>
+									<ul>
+										<li>
+											Not
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28One%20way%20match%20of%20%40template%20-%3e%20%40pattern%29%20%28%28Match%20%40pattern%29%20%28%28Match%20%40template%29%20%7c%20%40%29%29%20%7c%20%40">(One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09One%20way%20match%20of%20%40template%20-%3e%20%40pattern">One way match of <b>@template</b> -&gt; <b>@pattern</b></a></Summary>
+									<ul>
+										<li>
+											One
+										</li>
+										<li>
+											way
+										</li>
+										<li>
+											match
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+											<b>@template</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@pattern</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Match%20%40pattern%29%20%28%28Match%20%40template%29%20%7c%20%40%29">(Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)</a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Match%20%40pattern">Match <b>@pattern</b></a></Summary>
+											<ul>
+												<li>
+													Match
+												</li>
+												<li>
+													<b>@pattern</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Match%20%40template%29%20%7c%20%40">(Match <b>@template</b>) | <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Match%20%40template">Match <b>@template</b></a></Summary>
+													<ul>
+														<li>
+															Match
+														</li>
+														<li>
+															<b>@template</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Is%20variable%20%40v%29%20%28%28One%20way%20match%20of%20%40v%20-%3e%20%28%29%29%20%7c%20%40%29%20%28%28One%20way%20match%20of%20%40v%20-%3e%20%28%28%29%29%29%20%7c%20%40%29%20%7c%20%40">(Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Is%20variable%20%40v">Is variable <b>@v</b></a></Summary>
+									<ul>
+										<li>
+											Is
+										</li>
+										<li>
+											variable
+										</li>
+										<li>
+											<b>@v</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28One%20way%20match%20of%20%40v%20-%3e%20%28%29%29%20%7c%20%40">(One way match of <b>@v</b> -&gt; ()) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09One%20way%20match%20of%20%40v%20-%3e%20%28%29">One way match of <b>@v</b> -&gt; ()</a></Summary>
+											<ul>
+												<li>
+													One
+												</li>
+												<li>
+													way
+												</li>
+												<li>
+													match
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@v</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													()
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28One%20way%20match%20of%20%40v%20-%3e%20%28%28%29%29%29%20%7c%20%40">(One way match of <b>@v</b> -&gt; (())) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09One%20way%20match%20of%20%40v%20-%3e%20%28%28%29%29">One way match of <b>@v</b> -&gt; (())</a></Summary>
+											<ul>
+												<li>
+													One
+												</li>
+												<li>
+													way
+												</li>
+												<li>
+													match
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@v</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+												<details>
+													<Summary>()</Summary>
+													<ul>
+														<li>
+															()
+														</li>
+													</ul>
+												</details>
+
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Element%20%40x%20of%20%28%40x%20%7c%20%40%29%29%20%7c%20%40">(Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Element%20%40x%20of%20%28%40x%20%7c%20%40%29">Element <b>@x</b> of (<b>@x</b> | <b>@</b>)</a></Summary>
+									<ul>
+										<li>
+											Element
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40x%20%7c%20%40"><b>@x</b> | <b>@</b></a></Summary>
+											<ul>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Element%20%40x%20of%20%28%40%20%7c%20%40tail%29%29%20%28%28Element%20%40x%20of%20%40tail%29%20%7c%20%40%29%20%7c%20%40">(Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Element%20%40x%20of%20%28%40%20%7c%20%40tail%29">Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)</a></Summary>
+									<ul>
+										<li>
+											Element
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											of
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40%20%7c%20%40tail"><b>@</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Element%20%40x%20of%20%40tail%29%20%7c%20%40">(Element <b>@x</b> of <b>@tail</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Element%20%40x%20of%20%40tail">Element <b>@x</b> of <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													Element
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													of
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40%20in%20%28%29%20where%20%40%20-%3e%20%28%29%29%20%7c%20%40">(Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40%20in%20%28%29%20where%20%40%20-%3e%20%28%29">Find all <b>@</b> in () where <b>@</b> -&gt; ()</a></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+											()
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											()
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40x%20in%20%28%40head%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%28%40head%20%7c%20%40tail2%29%29%20%28%28Try%20%40head%29%20%28%28Try%20%40x%29%20%28%40predicate%20%7c%20%40%29%20%7c%20%40%29%20%7c%20%40%29%20%40%20%28%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40%29%20%7c%20%40">(Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40x%20in%20%28%40head%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%28%40head%20%7c%20%40tail2%29">Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)</a></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@x</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40tail"><b>@head</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40head%20%7c%20%40tail2"><b>@head</b> | <b>@tail2</b></a></Summary>
+											<ul>
+												<li>
+													<b>@head</b>
+												</li>
+												<li>
+| <b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Try%20%40head%29%20%28%28Try%20%40x%29%20%28%40predicate%20%7c%20%40%29%20%7c%20%40%29%20%7c%20%40">(Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Try%20%40head">Try <b>@head</b></a></Summary>
+											<ul>
+												<li>
+													Try
+												</li>
+												<li>
+													<b>@head</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%28Try%20%40x%29%20%28%40predicate%20%7c%20%40%29%20%7c%20%40">(Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b></a></Summary>
+											<ul>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09Try%20%40x">Try <b>@x</b></a></Summary>
+													<ul>
+														<li>
+															Try
+														</li>
+														<li>
+															<b>@x</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+												<details>
+													<Summary><a href="goal2.html#:~:text=%09%40predicate%20%7c%20%40"><b>@predicate</b> | <b>@</b></a></Summary>
+													<ul>
+														<li>
+															<b>@predicate</b>
+														</li>
+														<li>
+| <b>@</b>
+														</li>
+													</ul>
+												</details>
+
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+									<b>@</b>
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40">(Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a></Summary>
+											<ul>
+												<li>
+													Find
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													where
+												</li>
+												<li>
+													<b>@predicate</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40%20in%20%28%40%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%40tail2%29%20%28%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40%29%20%7c%20%40">(Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40%20in%20%28%40%20%7c%20%40tail%29%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b></a></Summary>
+									<ul>
+										<li>
+											Find
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40%20%7c%20%40tail"><b>@</b> | <b>@tail</b></a></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@tail</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											where
+										</li>
+										<li>
+											<b>@predicate</b>
+										</li>
+										<li>
+											-&gt;
+										</li>
+										<li>
+											<b>@tail2</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2%29%20%7c%20%40">(Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a></Summary>
+											<ul>
+												<li>
+													Find
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@x</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@tail</b>
+												</li>
+												<li>
+													where
+												</li>
+												<li>
+													<b>@predicate</b>
+												</li>
+												<li>
+													-&gt;
+												</li>
+												<li>
+													<b>@tail2</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28For%20all%20%40element%20in%20%28%40element%20%7c%20%40%29%20try%20%7c%20%40goal%29%20%28%40goal%20%7c%20%40%29%20%7c%20%40">(For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09For%20all%20%40element%20in%20%28%40element%20%7c%20%40%29%20try%20%7c%20%40goal">For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b></a></Summary>
+									<ul>
+										<li>
+											For
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@element</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40element%20%7c%20%40"><b>@element</b> | <b>@</b></a></Summary>
+											<ul>
+												<li>
+													<b>@element</b>
+												</li>
+												<li>
+| <b>@</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											try
+										</li>
+										<li>
+| <b>@goal</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%40goal%20%7c%20%40"><b>@goal</b> | <b>@</b></a></Summary>
+									<ul>
+										<li>
+											<b>@goal</b>
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%28For%20all%20%40element%20in%20%28%40%20%7c%20%40rest%29%20try%20%7c%20%40goal%29%20%28%28For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal%29%20%7c%20%40%29%20%7c%20%40">(For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b></a></Summary>
+							<ul>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09For%20all%20%40element%20in%20%28%40%20%7c%20%40rest%29%20try%20%7c%20%40goal">For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b></a></Summary>
+									<ul>
+										<li>
+											For
+										</li>
+										<li>
+											all
+										</li>
+										<li>
+											<b>@element</b>
+										</li>
+										<li>
+											in
+										</li>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09%40%20%7c%20%40rest"><b>@</b> | <b>@rest</b></a></Summary>
+											<ul>
+												<li>
+													<b>@</b>
+												</li>
+												<li>
+| <b>@rest</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+											try
+										</li>
+										<li>
+| <b>@goal</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+								<details>
+									<Summary><a href="goal2.html#:~:text=%09%28For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal%29%20%7c%20%40">(For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b></a></Summary>
+									<ul>
+										<li>
+										<details>
+											<Summary><a href="goal2.html#:~:text=%09For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b></a></Summary>
+											<ul>
+												<li>
+													For
+												</li>
+												<li>
+													all
+												</li>
+												<li>
+													<b>@element</b>
+												</li>
+												<li>
+													in
+												</li>
+												<li>
+													<b>@rest</b>
+												</li>
+												<li>
+													try
+												</li>
+												<li>
+| <b>@goal</b>
+												</li>
+											</ul>
+										</details>
+
+										</li>
+										<li>
+| <b>@</b>
+										</li>
+									</ul>
+								</details>
+
+								</li>
+								<li>
+| <b>@</b>
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context1.html">Context</a>
+&lt&lt&nbsp;&nbsp;&lt&nbsp;&nbsp;<a href="goal1.html">||</a>&nbsp;&nbsp;<a href="goal2.html">&gt</a>&nbsp;&nbsp;<a href="goal2.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

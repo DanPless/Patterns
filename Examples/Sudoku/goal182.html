@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal182.html" selected>One way match of <b>@44</b> -&gt; ()</option>
+  <option style="white-space: nowrap;" value="goal181.html#:~:text=One%20way%20match%20of%20%40v%20-%3e%20%28%29">Is variable <b>@44</b></option>
+  <option style="white-space: nowrap;" value="goal180.html#:~:text=Is%20variable%20%40x">Recursively find all <b>@x</b> of <b>@44</b> where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal179.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate (<b>@44</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal166.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate (2 <b>@44</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal159.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate (<b>@42</b> 2 <b>@44</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal152.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate (<b>@41</b> <b>@42</b> 2 <b>@44</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal148.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of (<b>@41</b> <b>@42</b> 2 <b>@44</b>) where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal147.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate ((<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal100.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal53.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal6.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@blanks</b></option>
+  <option style="white-space: nowrap;" value="goal2.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) where (Is variable <b>@x</b>) -&gt; <b>@blanks</b></option>
+  <option style="white-space: nowrap;" value="goal1.html#:~:text=Recursively%20find%20all%20%40x%20of%20%40puzzle%20where%20%28Is%20variable%20%40x%29%20-%3e%20%40blanks">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+</select>
+<pre><code>
+One way match of <b>@template</b> -&gt; <b>@pattern</b>
+	<a href="goal183.html">Match <b>@pattern</b></a>
+		Match <b>@template</b>
+		||| ()
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><b>@pattern</b></td>
+			<td>
+					()			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context152.html">Context</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal181.html">&lt</a>&nbsp;&nbsp;<a href="goal182.html">||</a>&nbsp;&nbsp;<a href="goal183.html">&gt</a>&nbsp;&nbsp;<a href="goal183.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

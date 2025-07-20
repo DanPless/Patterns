@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal24.html" selected>Recursively find all <b>@x</b> of 1 where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal23.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate 1 -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal19.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of 1 where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal18.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate (1 <b>@13</b> <b>@14</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal11.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate (<b>@11</b> 1 <b>@13</b> <b>@14</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal7.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of (<b>@11</b> 1 <b>@13</b> <b>@14</b>) where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal6.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@blanks</b></option>
+  <option style="white-space: nowrap;" value="goal2.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) where (Is variable <b>@x</b>) -&gt; <b>@blanks</b></option>
+  <option style="white-space: nowrap;" value="goal1.html#:~:text=Recursively%20find%20all%20%40x%20of%20%40puzzle%20where%20%28Is%20variable%20%40x%29%20-%3e%20%40blanks">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+</select>
+<pre><code>
+Recursively find all <b>@whole</b> of <b>@whole</b> where <b>@predicate</b> -&gt; (<b>@whole</b>)
+	<a href="goal25.html">| <b>@predicate</b></a>
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+					1			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@head_list</b></td>
+			<td>
+					1			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@whole</b></td>
+			<td>
+					1			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@predicate</b></td>
+			<td>
+				<details>
+					<Summary>Is variable | 1</Summary>
+					<ul>
+						<li>
+							Is
+						</li>
+						<li>
+							variable
+						</li>
+						<li>
+							1
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<hr/>
+<pre><code>
+Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt; <b>@list</b>
+	<a href="goal28.html">Accumulate <b>@whole</b> -&gt; <b>@list</b></a>
+		Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
+			Recursively find all <b>@item</b> of <b>@head</b> where <b>@predicate</b> -&gt; <b>@head_list</b><span style="color:green">  \ Do the first</span>
+			Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span style="color:green">  \ Then the rest</span>
+			Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
+		Accumulate <b>@</b> -&gt; ()
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><a href="goal28.html"><b>@head_list</b></a></td>
+			<td>
+					()			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@whole</b></td>
+			<td>
+					1			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@predicate</b></td>
+			<td>
+				<details>
+					<Summary><a href="goal23.html#:~:text=%09Is%20variable%20%40x">Is variable <b>@x</b></a></Summary>
+					<ul>
+						<li>
+							Is
+						</li>
+						<li>
+							variable
+						</li>
+						<li>
+							<b>@x</b>
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@list</b></td>
+			<td>
+					()			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context23.html">Context</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal23.html">&lt</a>&nbsp;&nbsp;<a href="goal24.html">||</a>&nbsp;&nbsp;<a href="goal25.html">&gt</a>&nbsp;&nbsp;<a href="goal28.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

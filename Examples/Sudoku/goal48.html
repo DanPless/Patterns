@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal48.html" selected>Append (<b>@13</b>) to (<b>@14</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal31.html#:~:text=Append%20%40head_list%20to%20%40tail_list%20-%3e%20%40accum_list">Accumulate (<b>@13</b> <b>@14</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal18.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate (1 <b>@13</b> <b>@14</b>) -&gt; <b>@tail_list</b></option>
+  <option style="white-space: nowrap;" value="goal11.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate (<b>@11</b> 1 <b>@13</b> <b>@14</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal7.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of (<b>@11</b> 1 <b>@13</b> <b>@14</b>) where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
+  <option style="white-space: nowrap;" value="goal6.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@blanks</b></option>
+  <option style="white-space: nowrap;" value="goal2.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) where (Is variable <b>@x</b>) -&gt; <b>@blanks</b></option>
+  <option style="white-space: nowrap;" value="goal1.html#:~:text=Recursively%20find%20all%20%40x%20of%20%40puzzle%20where%20%28Is%20variable%20%40x%29%20-%3e%20%40blanks">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+</select>
+<pre><code>
+Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)
+	<a href="goal49.html">Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b></a>
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><b>@tail_list</b></td>
+			<td>
+				<details>
+					<Summary><b>@13</b> <b>@14</b></Summary>
+					<ul>
+						<li>
+							<b>@13</b>
+						</li>
+						<li>
+							<b>@14</b>
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@tail</b></td>
+			<td>
+					()			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+				<details>
+					<Summary><a href="goal46.html#:~:text=%09%40head%20%7c%20%40inter"><b>@14</b></a></Summary>
+					<ul>
+						<li>
+							<b>@14</b>
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a href="goal49.html"><b>@inter</b></a></td>
+			<td>
+				<details>
+					<Summary><a href="goal46.html#:~:text=%09%40head%20%7c%20%40inter"><b>@14</b></a></Summary>
+					<ul>
+						<li>
+							<b>@14</b>
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context11.html">Context</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal47.html">&lt</a>&nbsp;&nbsp;<a href="goal48.html">||</a>&nbsp;&nbsp;<a href="goal49.html">&gt</a>&nbsp;&nbsp;<a href="goal49.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Patterns</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+</head>
+<body>
+<select id="patternSelector" onchange="window.location.href=this.value;">
+  <option style="white-space: nowrap;" value="goal1.html" selected>Towers of Hanoi (3 2 1) from A through B to C -&gt; <b>@result</b></option>
+</select>
+<pre><code>
+Towers of Hanoi (<b>@largest</b> | <b>@rest</b>) from <b>@start</b> through <b>@middle</b> to <b>@end</b> -&gt; <b>@path</b>
+	<a href="goal2.html">Towers of Hanoi <b>@rest</b> from <b>@start</b> through <b>@end</b> to <b>@middle</b> -&gt; <b>@frontEnd</b></a>
+	<a href="goal13.html">Towers of Hanoi <b>@rest</b> from <b>@middle</b> through <b>@start</b> to <b>@end</b> -&gt; <b>@backEnd</b></a>
+	<a href="goal24.html">Append <b>@frontEnd</b> to ((<b>@largest</b> --&gt; <b>@end</b>) | <b>@backEnd</b>) -&gt; <b>@path</b></a>
+</code></pre>
+
+<table style="font-family: monospace; font-size: 16px">
+    <tbody id="tableBody">
+		<tr>
+			<td style="vertical-align: top;"><a href="goal24.html"><b>@result</b></a></td>
+			<td>
+				<details>
+					<Summary><a href="goal24.html#:~:text=%09%40head%20%7c%20%40inter">(1 --&gt; C) (2 --&gt; B) (1 --&gt; B) (3 --&gt; C) (1 --&gt; A) (2 --&gt; C) (1 --&gt; C)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal3.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%40largest%20--%3e%20%40end">2 --&gt; B</a></Summary>
+							<ul>
+								<li>
+									2
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal7.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; B</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>3 --&gt; C</Summary>
+							<ul>
+								<li>
+									3
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal14.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; A</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									A
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal13.html#:~:text=%09%40largest%20--%3e%20%40end">2 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									2
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal18.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@largest</b></td>
+			<td>
+					3			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@rest</b></td>
+			<td>
+				<details>
+					<Summary>2 1</Summary>
+					<ul>
+						<li>
+							2
+						</li>
+						<li>
+							1
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@start</b></td>
+			<td>
+					A			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@middle</b></td>
+			<td>
+					B			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@end</b></td>
+			<td>
+					C			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@path</b></td>
+			<td>
+				<details>
+					<Summary><a href="goal24.html#:~:text=%09%40head%20%7c%20%40inter">(1 --&gt; C) (2 --&gt; B) (1 --&gt; B) (3 --&gt; C) (1 --&gt; A) (2 --&gt; C) (1 --&gt; C)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal3.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%40largest%20--%3e%20%40end">2 --&gt; B</a></Summary>
+							<ul>
+								<li>
+									2
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal7.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; B</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary>3 --&gt; C</Summary>
+							<ul>
+								<li>
+									3
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal14.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; A</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									A
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal13.html#:~:text=%09%40largest%20--%3e%20%40end">2 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									2
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal18.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr class="divider">
+			<td colspan="2"></td>
+			</tr>
+		<tr>
+			<td style="vertical-align: top;"><a href="goal11.html"><b>@frontEnd</b></a></td>
+			<td>
+				<details>
+					<Summary><a href="goal11.html#:~:text=%09%40head%20%7c%20%40inter">(1 --&gt; C) (2 --&gt; B) (1 --&gt; B)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal3.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal2.html#:~:text=%09%40largest%20--%3e%20%40end">2 --&gt; B</a></Summary>
+							<ul>
+								<li>
+									2
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal7.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; B</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a href="goal22.html"><b>@backEnd</b></a></td>
+			<td>
+				<details>
+					<Summary><a href="goal22.html#:~:text=%09%40head%20%7c%20%40inter">(1 --&gt; A) (2 --&gt; C) (1 --&gt; C)</a></Summary>
+					<ul>
+						<li>
+						<details>
+							<Summary><a href="goal14.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; A</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									A
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal13.html#:~:text=%09%40largest%20--%3e%20%40end">2 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									2
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+						<li>
+						<details>
+							<Summary><a href="goal18.html#:~:text=%09%40largest%20--%3e%20%40end">1 --&gt; C</a></Summary>
+							<ul>
+								<li>
+									1
+								</li>
+								<li>
+									--&gt;
+								</li>
+								<li>
+									C
+								</li>
+							</ul>
+						</details>
+
+						</li>
+					</ul>
+				</details>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<pre><code>
+<a href="context1.html">Context</a>
+&lt&lt&nbsp;&nbsp;&lt&nbsp;&nbsp;<a href="goal1.html">||</a>&nbsp;&nbsp;<a href="goal2.html">&gt</a>&nbsp;&nbsp;<a href="goal27.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+</code></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new SlimSelect({
+      select: '#patternSelector'
+    });
+  });
+</script>
+</body>
+</html>

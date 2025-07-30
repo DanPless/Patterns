@@ -75,7 +75,7 @@
 Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)
 	<a href="goal26539.html">Try <b>@head</b></a><span style="color:green">  \ Need to separate the value @x to avoid binding</span>
 		Try <b>@x</b>
-			| <b>@predicate</b>
+			| <b>@predicate</b><span style="color:green">  \ Test the predicate</span>
 	<span style="color:red">|| <b>@</b></span><span style="color:green">  \ Cut so that unification failure on output doesn't trigger next rule</span>
 	<a href="goal26544.html">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a>
 </code></pre>

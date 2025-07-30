@@ -49,7 +49,7 @@ Boxpose ((<b>@11</b> <b>@12</b> <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b
 Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)
 	Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>
 Not | <b>@predicate</b>
-	| <b>@predicate</b>
+	| <b>@predicate</b><span style="color:green">  \ Test the predicate</span>
 	|| <b>@</b><span style="color:green">          \ So it will be cut and stop</span>
 	||| ()<span style="color:green">        \ After this hard fail</span>
 Not | <b>@</b>
@@ -67,7 +67,7 @@ Find all <b>@</b> in () where <b>@</b> -&gt; ()
 Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)
 	Try <b>@head</b><span style="color:green">  \ Need to separate the value @x to avoid binding</span>
 		Try <b>@x</b>
-			| <b>@predicate</b>
+			| <b>@predicate</b><span style="color:green">  \ Test the predicate</span>
 	|| <b>@</b><span style="color:green">  \ Cut so that unification failure on output doesn't trigger next rule</span>
 	Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>
 Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
@@ -76,6 +76,7 @@ For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
 	| <b>@goal</b>
 For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
 	For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>
+||| ()
 </code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
 <script>

@@ -9,8 +9,8 @@
 </head>
 <body>
 <select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal310.html" selected>Find all <b>@x</b> in (<b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
-  <option style="white-space: nowrap;" value="goal302.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@x</b> in (<b>@22</b> <b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
+  <option style="white-space: nowrap;" value="goal310.html" selected>Find all <b>@val</b> in (<b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
+  <option style="white-space: nowrap;" value="goal302.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@22</b> <b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
   <option style="white-space: nowrap;" value="goal294.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@21</b> <b>@22</b> <b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
   <option style="white-space: nowrap;" value="goal293.html#:~:text=Find%20all%20%40val%20in%20%40list%20where%20%28Not%20Is%20variable%20%40val%29%20-%3e%20%40filled_list">Find constraint violation in (<b>@21</b> <b>@22</b> <b>@23</b> 3)</option>
   <option style="white-space: nowrap;" value="goal292.html#:~:text=Find%20constraint%20violation%20in%20%40row">For all <b>@row</b> in ((<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
@@ -55,6 +55,11 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 			<td colspan="2"></td>
 			</tr>
 		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+					<b>@val</b>			</td>
+		</tr>
+		<tr>
 			<td style="vertical-align: top;"><b>@head</b></td>
 			<td>
 					<b>@23</b>			</td>
@@ -98,20 +103,33 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 </table>
 <hr/>
 <pre><code>
-Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
+Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
 	<a href="goal318.html">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a>
 </code></pre>
 
 <table style="font-family: monospace; font-size: 16px">
     <tbody id="tableBody">
 		<tr>
-			<td style="vertical-align: top;"><a href="goal326.html"><b>@filled_list</b></a></td>
+			<td style="vertical-align: top;"><a href="goal318.html"><b>@filled_list</b></a></td>
 			<td>
-					()			</td>
+				<details>
+					<Summary><a href="goal318.html#:~:text=%40head%20%7c%20%40tail2">3</a></Summary>
+					<ul>
+						<li>
+							3
+						</li>
+					</ul>
+				</details>
+			</td>
 		</tr>
 		<tr class="divider">
 			<td colspan="2"></td>
 			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+					<b>@val</b>			</td>
+		</tr>
 		<tr>
 			<td style="vertical-align: top;"><b>@tail</b></td>
 			<td>
@@ -150,13 +168,21 @@ Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>
 		<tr>
 			<td style="vertical-align: top;"><b>@tail2</b></td>
 			<td>
-					()			</td>
+				<details>
+					<Summary><a href="goal318.html#:~:text=%40head%20%7c%20%40tail2">3</a></Summary>
+					<ul>
+						<li>
+							3
+						</li>
+					</ul>
+				</details>
+			</td>
 		</tr>
     </tbody>
 </table>
 <pre><code>
 <a href="context1.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal309.html">&lt</a>&nbsp;&nbsp;<a href="goal310.html">||</a>&nbsp;&nbsp;<a href="goal311.html">&gt</a>&nbsp;&nbsp;<a href="goal326.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal309.html">&lt</a>&nbsp;&nbsp;<a href="goal310.html">||</a>&nbsp;&nbsp;<a href="goal311.html">&gt</a>&nbsp;&nbsp;<a href="goal324.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
 </code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
 <script>

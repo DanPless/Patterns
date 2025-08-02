@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
 </head>
 <body>
-<pre><code>Try <b>@x</b>
+<pre><code>Try <b>@val</b>
 	Not Is variable <b>@val</b>
 <hr/>Solve 4x4 Sudoku <b>@puzzle</b>
 	Recursively find all <b>@x</b> of <b>@puzzle</b> where (Is variable <b>@x</b>) -&gt; <b>@blanks</b>
@@ -70,7 +70,7 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 			| <b>@predicate</b><span style="color:green">  \ Test the predicate</span>
 	|| <b>@</b><span style="color:green">  \ Cut so that unification failure on output doesn't trigger next rule</span>
 	Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>
-Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
+Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
 	Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>
 For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
 	| <b>@goal</b>

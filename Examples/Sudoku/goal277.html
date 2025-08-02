@@ -9,7 +9,7 @@
 </head>
 <body>
 <select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal277.html" selected>Find all <b>@x</b> in (<b>@14</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
+  <option style="white-space: nowrap;" value="goal277.html" selected>Find all <b>@val</b> in (<b>@14</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
   <option style="white-space: nowrap;" value="goal269.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@13</b> <b>@14</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
   <option style="white-space: nowrap;" value="goal263.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (1 <b>@13</b> <b>@14</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
   <option style="white-space: nowrap;" value="goal257.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (2 1 <b>@13</b> <b>@14</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
@@ -55,6 +55,11 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 			<td colspan="2"></td>
 			</tr>
 		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+					<b>@val</b>			</td>
+		</tr>
+		<tr>
 			<td style="vertical-align: top;"><b>@head</b></td>
 			<td>
 					<b>@14</b>			</td>
@@ -90,7 +95,7 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 </table>
 <hr/>
 <pre><code>
-Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
+Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
 	<a href="goal285.html">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a>
 </code></pre>
 
@@ -104,6 +109,11 @@ Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>
 		<tr class="divider">
 			<td colspan="2"></td>
 			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+					<b>@val</b>			</td>
+		</tr>
 		<tr>
 			<td style="vertical-align: top;"><b>@tail</b></td>
 			<td>

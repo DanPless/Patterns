@@ -9,12 +9,12 @@
 </head>
 <body>
 <select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal386.html" selected>One way match of <b>@val</b> -&gt; ()</option>
-  <option style="white-space: nowrap;" value="goal385.html#:~:text=One%20way%20match%20of%20%40v%20-%3e%20%28%29">Is variable <b>@val</b></option>
-  <option style="white-space: nowrap;" value="goal384.html#:~:text=Is%20variable%20%40val">Not Is variable <b>@val</b></option>
+  <option style="white-space: nowrap;" value="goal386.html" selected>One way match of 2 -&gt; ()</option>
+  <option style="white-space: nowrap;" value="goal385.html#:~:text=One%20way%20match%20of%20%40v%20-%3e%20%28%29">Is variable 2</option>
+  <option style="white-space: nowrap;" value="goal384.html#:~:text=Is%20variable%20%40val">Not Is variable 2</option>
   <option style="white-space: nowrap;" value="goal383.html#:~:text=Not%20Is%20variable%20%40val">Try 2</option>
-  <option style="white-space: nowrap;" value="goal382.html#:~:text=Try%20%40head">Find all <b>@x</b> in (2 <b>@44</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
-  <option style="white-space: nowrap;" value="goal374.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@x</b> in (<b>@42</b> 2 <b>@44</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
+  <option style="white-space: nowrap;" value="goal382.html#:~:text=Try%20%40head">Find all <b>@val</b> in (2 <b>@44</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
+  <option style="white-space: nowrap;" value="goal374.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@42</b> 2 <b>@44</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
   <option style="white-space: nowrap;" value="goal366.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@41</b> <b>@42</b> 2 <b>@44</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
   <option style="white-space: nowrap;" value="goal365.html#:~:text=Find%20all%20%40val%20in%20%40list%20where%20%28Not%20Is%20variable%20%40val%29%20-%3e%20%40filled_list">Find constraint violation in (<b>@41</b> <b>@42</b> 2 <b>@44</b>)</option>
   <option style="white-space: nowrap;" value="goal364.html#:~:text=Find%20constraint%20violation%20in%20%40row">For all <b>@row</b> in ((<b>@41</b> <b>@42</b> 2 <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
@@ -42,7 +42,7 @@ One way match of <b>@template</b> -&gt; <b>@pattern</b>
 		<tr>
 			<td style="vertical-align: top;"><b>@template</b></td>
 			<td>
-					<b>@val</b>			</td>
+					2			</td>
 		</tr>
 		<tr>
 			<td style="vertical-align: top;"><b>@pattern</b></td>
@@ -51,8 +51,9 @@ One way match of <b>@template</b> -&gt; <b>@pattern</b>
 		</tr>
     </tbody>
 </table>
+<hr/>
 <pre><code>
-<a href="context383.html">Context</a>
+<span style="color:red">Fail</span> <a href="context383.html">Context</a>
 <a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal385.html">&lt</a>&nbsp;&nbsp;<a href="goal386.html">||</a>&nbsp;&nbsp;<a href="goal387.html">&gt</a>&nbsp;&nbsp;<a href="goal387.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
 </code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>

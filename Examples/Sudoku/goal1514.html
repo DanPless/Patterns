@@ -9,25 +9,23 @@
 </head>
 <body>
 <select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal1514.html" selected>Try <b>@21</b></option>
-  <option style="white-space: nowrap;" value="goal1513.html#:~:text=Try%20%40head">Find all <b>@val</b> in (<b>@21</b> 1 <b>@41</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
-  <option style="white-space: nowrap;" value="goal1507.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (2 <b>@21</b> 1 <b>@41</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
-  <option style="white-space: nowrap;" value="goal1506.html#:~:text=Find%20all%20%40val%20in%20%40list%20where%20%28Not%20Is%20variable%20%40val%29%20-%3e%20%40filled_list">Find constraint violation in (2 <b>@21</b> 1 <b>@41</b>)</option>
-  <option style="white-space: nowrap;" value="goal1505.html#:~:text=Find%20constraint%20violation%20in%20%40row">For all <b>@row</b> in ((2 <b>@21</b> 1 <b>@41</b>) (1 <b>@22</b> <b>@32</b> <b>@42</b>) (3 <b>@23</b> <b>@33</b> 2) (4 3 <b>@34</b> <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
-  <option style="white-space: nowrap;" value="goal1504.html#:~:text=For%20all%20%40row%20in%20%40puzzle%20try%20Find%20constraint%20violation%20in%20%40row">Not For all <b>@row</b> in ((2 <b>@21</b> 1 <b>@41</b>) (1 <b>@22</b> <b>@32</b> <b>@42</b>) (3 <b>@23</b> <b>@33</b> 2) (4 3 <b>@34</b> <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
-  <option style="white-space: nowrap;" value="goal1503.html#:~:text=Not%20For%20all%20%40row%20in%20%40puzzle%20try%20Find%20constraint%20violation%20in%20%40row">Check rows in ((2 <b>@21</b> 1 <b>@41</b>) (1 <b>@22</b> <b>@32</b> <b>@42</b>) (3 <b>@23</b> <b>@33</b> 2) (4 3 <b>@34</b> <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1348.html#:~:text=Check%20rows%20in%20%40transpuzzle">Check constraints on ((2 1 3 4) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1347.html#:~:text=Check%20constraints%20on%20%40puzzle">Push 4 in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 3 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1346.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 3 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1303.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 3 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1267.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 3 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1227.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 3 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1226.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 3 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal777.html#:~:text=Fill%20in%20all%20%40rest%20in%20%40puzzle">Push 3 in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal776.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal739.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal699.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal698.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal1514.html" selected>Not Is variable <b>@23</b></option>
+  <option style="white-space: nowrap;" value="goal1513.html#:~:text=Not%20Is%20variable%20%40val">Try <b>@23</b></option>
+  <option style="white-space: nowrap;" value="goal1512.html#:~:text=Try%20%40head">Find all <b>@val</b> in (<b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
+  <option style="white-space: nowrap;" value="goal1504.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@14</b> <b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
+  <option style="white-space: nowrap;" value="goal1498.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (4 <b>@14</b> <b>@23</b> 3) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
+  <option style="white-space: nowrap;" value="goal1497.html#:~:text=Find%20all%20%40val%20in%20%40list%20where%20%28Not%20Is%20variable%20%40val%29%20-%3e%20%40filled_list">Find constraint violation in (4 <b>@14</b> <b>@23</b> 3)</option>
+  <option style="white-space: nowrap;" value="goal1496.html#:~:text=Find%20constraint%20violation%20in%20%40row">For all <b>@row</b> in ((4 <b>@14</b> <b>@23</b> 3) (1 <b>@32</b> <b>@41</b> <b>@42</b>) (<b>@33</b> <b>@34</b> 2 <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
+  <option style="white-space: nowrap;" value="goal1459.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@row</b> in ((2 1 <b>@21</b> <b>@22</b>) (4 <b>@14</b> <b>@23</b> 3) (1 <b>@32</b> <b>@41</b> <b>@42</b>) (<b>@33</b> <b>@34</b> 2 <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
+  <option style="white-space: nowrap;" value="goal1458.html#:~:text=For%20all%20%40row%20in%20%40puzzle%20try%20Find%20constraint%20violation%20in%20%40row">Not For all <b>@row</b> in ((2 1 <b>@21</b> <b>@22</b>) (4 <b>@14</b> <b>@23</b> 3) (1 <b>@32</b> <b>@41</b> <b>@42</b>) (<b>@33</b> <b>@34</b> 2 <b>@44</b>)) try Find constraint violation in <b>@row</b></option>
+  <option style="white-space: nowrap;" value="goal1457.html#:~:text=Not%20For%20all%20%40row%20in%20%40puzzle%20try%20Find%20constraint%20violation%20in%20%40row">Check rows in ((2 1 <b>@21</b> <b>@22</b>) (4 <b>@14</b> <b>@23</b> 3) (1 <b>@32</b> <b>@41</b> <b>@42</b>) (<b>@33</b> <b>@34</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal1155.html#:~:text=Check%20rows%20in%20%40boxpuzzle">Check constraints on ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal1154.html#:~:text=Check%20constraints%20on%20%40puzzle">Push 4 in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal1153.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal777.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal740.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal700.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
+  <option style="white-space: nowrap;" value="goal699.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
   <option style="white-space: nowrap;" value="goal251.html#:~:text=Fill%20in%20all%20%40rest%20in%20%40puzzle">Push 2 in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
   <option style="white-space: nowrap;" value="goal250.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
   <option style="white-space: nowrap;" value="goal212.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
@@ -35,23 +33,39 @@
   <option style="white-space: nowrap;" value="goal1.html#:~:text=Fill%20in%20all%20%40blanks%20in%20%40puzzle">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
 </select>
 <pre><code>
-<a href="goal1513.html#:~:text=Try%20%40x">Try <b>@val</b></a>
-	<a href="goal1515.html">Not Is variable <b>@val</b></a>
+Not | <b>@predicate</b>
+	<a href="goal1515.html">| <b>@predicate</b></a><span style="color:green">  \ Test the predicate</span>
+	<span style="color:red">|| <b>@</b></span><span style="color:green">          \ So it will be cut and stop</span>
+	||| ()<span style="color:green">        \ After this hard fail</span>
 </code></pre>
 
 <table style="font-family: monospace; font-size: 16px">
     <tbody id="tableBody">
 		<tr>
-			<td style="vertical-align: top;"><b>@val</b></td>
+			<td style="vertical-align: top;"><b>@predicate</b></td>
 			<td>
-					<b>@21</b>			</td>
+				<details>
+					<Summary><a href="goal1513.html#:~:text=Is%20variable%20%40val">Is variable <b>@23</b></a></Summary>
+					<ul>
+						<li>
+							Is
+						</li>
+						<li>
+							variable
+						</li>
+						<li>
+							<b>@23</b>
+						</li>
+					</ul>
+				</details>
+			</td>
 		</tr>
     </tbody>
 </table>
 <hr/>
 <pre><code>
-<span style="color:red">Fail</span> <a href="context1514.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal1513.html">&lt</a>&nbsp;&nbsp;<a href="goal1514.html">||</a>&nbsp;&nbsp;<a href="goal1515.html">&gt</a>&nbsp;&nbsp;<a href="goal1520.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+<span style="color:red">Cut</span> <a href="context1513.html">Context</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal1513.html">&lt</a>&nbsp;&nbsp;<a href="goal1514.html">||</a>&nbsp;&nbsp;<a href="goal1515.html">&gt</a>&nbsp;&nbsp;<a href="goal1519.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
 </code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
 <script>

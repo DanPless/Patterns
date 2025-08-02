@@ -9,7 +9,7 @@
 </head>
 <body>
 <select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal420.html" selected>Find all <b>@x</b> in (1 <b>@41</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
+  <option style="white-space: nowrap;" value="goal420.html" selected>Find all <b>@val</b> in (1 <b>@41</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
   <option style="white-space: nowrap;" value="goal412.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (<b>@21</b> 1 <b>@41</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@tail2</b></option>
   <option style="white-space: nowrap;" value="goal406.html#:~:text=Find%20all%20%40x%20in%20%40tail%20where%20%40predicate%20-%3e%20%40tail2">Find all <b>@val</b> in (2 <b>@21</b> 1 <b>@41</b>) where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b></option>
   <option style="white-space: nowrap;" value="goal405.html#:~:text=Find%20all%20%40val%20in%20%40list%20where%20%28Not%20Is%20variable%20%40val%29%20-%3e%20%40filled_list">Find constraint violation in (2 <b>@21</b> 1 <b>@41</b>)</option>
@@ -28,8 +28,8 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 	<a href="goal421.html">Try <b>@head</b></a><span style="color:green">  \ Need to separate the value @x to avoid binding</span>
 		Try <b>@x</b>
 			| <b>@predicate</b><span style="color:green">  \ Test the predicate</span>
-	|| <b>@</b><span style="color:green">  \ Cut so that unification failure on output doesn't trigger next rule</span>
-	Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>
+	<span style="color:red">|| <b>@</b></span><span style="color:green">  \ Cut so that unification failure on output doesn't trigger next rule</span>
+	<a href="goal426.html">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a>
 </code></pre>
 
 <table style="font-family: monospace; font-size: 16px">
@@ -38,13 +38,10 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 			<td style="vertical-align: top;"><b>@tail2</b></td>
 			<td>
 				<details>
-					<Summary>1 | <b>@tail2</b></Summary>
+					<Summary>1</Summary>
 					<ul>
 						<li>
 							1
-						</li>
-						<li>
-| <b>@tail2</b>
 						</li>
 					</ul>
 				</details>
@@ -53,6 +50,11 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 		<tr class="divider">
 			<td colspan="2"></td>
 			</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>@x</b></td>
+			<td>
+					<b>@val</b>			</td>
+		</tr>
 		<tr>
 			<td style="vertical-align: top;"><b>@head</b></td>
 			<td>
@@ -93,61 +95,8 @@ Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt
 				</details>
 			</td>
 		</tr>
-    </tbody>
-</table>
-<hr/>
-<pre><code>
-Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
-	<a href="goal428.html">Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b></a>
-</code></pre>
-
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
 		<tr>
-			<td style="vertical-align: top;"><a href="goal436.html"><b>@tail2</b></a></td>
-			<td>
-					()			</td>
-		</tr>
-		<tr class="divider">
-			<td colspan="2"></td>
-			</tr>
-		<tr>
-			<td style="vertical-align: top;"><b>@tail</b></td>
-			<td>
-				<details>
-					<Summary><a href="goal401.html#:~:text=%4041"><b>@41</b></a></Summary>
-					<ul>
-						<li>
-							<b>@41</b>
-						</li>
-					</ul>
-				</details>
-			</td>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;"><b>@predicate</b></td>
-			<td>
-				<details>
-					<Summary><a href="goal405.html#:~:text=Not%20Is%20variable%20%40val">Not Is variable <b>@val</b></a></Summary>
-					<ul>
-						<li>
-							Not
-						</li>
-						<li>
-							Is
-						</li>
-						<li>
-							variable
-						</li>
-						<li>
-							<b>@val</b>
-						</li>
-					</ul>
-				</details>
-			</td>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;"><b>@tail2</b></td>
+			<td style="vertical-align: top;"><a href="goal434.html"><b>@tail2</b></a></td>
 			<td>
 					()			</td>
 		</tr>
@@ -155,7 +104,7 @@ Find all <b>@</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>
 </table>
 <pre><code>
 <a href="context1.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal419.html">&lt</a>&nbsp;&nbsp;<a href="goal420.html">||</a>&nbsp;&nbsp;<a href="goal421.html">&gt</a>&nbsp;&nbsp;<a href="goal436.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal419.html">&lt</a>&nbsp;&nbsp;<a href="goal420.html">||</a>&nbsp;&nbsp;<a href="goal421.html">&gt</a>&nbsp;&nbsp;<a href="goal434.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
 </code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
 <script>

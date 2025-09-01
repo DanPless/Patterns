@@ -3,26 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patterns</title>
+	<title>Patterns - Get @context</title>
 	<link rel="stylesheet" href="Patterns.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal2.html" selected>Get <b>@list</b></option>
-  <option style="white-space: nowrap;" value="goal1.html#:~:text=Get%20%40context">Get context -&gt; <b>@list</b></option>
-</select>
-<pre><code>
-Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>))
+<details class="goalStack">
+	<summary><a class="succeed" href="goal2.html">Get <b>@list</b></a></summary>
+	<ul>
+		<li><a class="succeed" href="goal1.html#:~:text=Get%20%40context">Get context -&gt; <b>@list</b></a></li>
+	</ul>
+</details>
+<div class="split" id="split" aria-label="Main content split" role="group">
+	<div class="pane pane--top" id="pane-top">
+<pre><code><a class="lineLink" href="goal2.html#:~:text=Get%20%40end">Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@intermediate</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>))</a>
 </code></pre>
 
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
+<table>
+	<tbody>
 		<tr>
 			<td style="vertical-align: top;"><b>@list</b></td>
 			<td>
 				<details>
-					<Summary>((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>)</Summary>
+					<Summary>((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@intermediate</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>)</Summary>
 					<ul>
 						<li>
 						<details>
@@ -169,11 +172,11 @@ Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</
 						</li>
 						<li>
 						<details>
-							<Summary>(Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b>) | <b>@</b></Summary>
+							<Summary>(Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@intermediate</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b>) | <b>@</b>) | <b>@</b></Summary>
 							<ul>
 								<li>
 								<details>
-									<Summary>Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@inter</b>)</Summary>
+									<Summary>Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@intermediate</b>)</Summary>
 									<ul>
 										<li>
 											Append
@@ -203,13 +206,13 @@ Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</
 										</li>
 										<li>
 										<details>
-											<Summary><b>@head</b> | <b>@inter</b></Summary>
+											<Summary><b>@head</b> | <b>@intermediate</b></Summary>
 											<ul>
 												<li>
 													<b>@head</b>
 												</li>
 												<li>
-| <b>@inter</b>
+| <b>@intermediate</b>
 												</li>
 											</ul>
 										</details>
@@ -221,11 +224,11 @@ Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</
 								</li>
 								<li>
 								<details>
-									<Summary>(Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b>) | <b>@</b></Summary>
+									<Summary>(Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b>) | <b>@</b></Summary>
 									<ul>
 										<li>
 										<details>
-											<Summary>Append <b>@tail</b> to <b>@x</b> -&gt; <b>@inter</b></Summary>
+											<Summary>Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b></Summary>
 											<ul>
 												<li>
 													Append
@@ -243,7 +246,7 @@ Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</
 													-&gt;
 												</li>
 												<li>
-													<b>@inter</b>
+													<b>@intermediate</b>
 												</li>
 											</ul>
 										</details>
@@ -1135,19 +1138,33 @@ Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</
 				</details>
 			</td>
 		</tr>
-    </tbody>
+	</tbody>
 </table>
-<pre><code>
-<a href="context2.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal1.html">&lt</a>&nbsp;&nbsp;<a href="goal2.html">||</a>&nbsp;&nbsp;&gt&nbsp;&nbsp;|&gt&nbsp;&nbsp;&gt&gt
+	</div>
+	<div class="split__gutter" id="split-gutter" role="separator" aria-orientation="horizontal" aria-label="Resize panels" tabindex="0" aria-controls="pane-top pane-bottom"></div>
+	<div class="pane pane--bottom" id="pane-bottom">
+<pre class = "source"><code>Get (((Get context -&gt; <b>@context</b>) ((Get <b>@context</b>) ((Get <b>@end</b>) | <b>@</b>) ((Get <b>@</b>) <b>@</b>) | <b>@end</b>) | <b>@</b>) ((Append () to <b>@x</b> -&gt; <b>@x</b>) | <b>@</b>) ((Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@intermediate</b>)) ((Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b>) | <b>@</b>) | <b>@</b>) ((Not | <b>@predicate</b>) (<b>@predicate</b> | <b>@</b>) <b>@</b>) ((Not | <b>@</b>) | <b>@</b>) ((One way match of <b>@template</b> -&gt; <b>@pattern</b>) ((Match <b>@pattern</b>) ((Match <b>@template</b>) | <b>@</b>)) | <b>@</b>) ((Is variable <b>@v</b>) ((One way match of <b>@v</b> -&gt; ()) | <b>@</b>) ((One way match of <b>@v</b> -&gt; (())) | <b>@</b>) | <b>@</b>) ((Element <b>@x</b> of (<b>@x</b> | <b>@</b>)) | <b>@</b>) ((Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)) ((Element <b>@x</b> of <b>@tail</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@</b> in () where <b>@</b> -&gt; ()) | <b>@</b>) ((Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)) ((Try <b>@head</b>) ((Try <b>@x</b>) (<b>@predicate</b> | <b>@</b>) | <b>@</b>) | <b>@</b>) <b>@</b> ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>) ((Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>) | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>) (<b>@goal</b> | <b>@</b>) | <b>@</b>) ((For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>) ((For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>) | <b>@</b>) | <b>@</b>))
+Get <b>@</b>
+	|| <b>@</b>
+	||| ()
+<hr/>Get context -&gt; <b>@context</b>
+	Get <b>@context</b>
+		Get <b>@end</b>
+		Get <b>@</b>
+			|| <b>@</b>
+			||| ()
+		||| <b>@end</b>
 </code></pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new SlimSelect({
-      select: '#patternSelector'
-    });
-  });
-</script>
+	</div>
+</div>
+<nav class="pager pager--sticky" aria-label="Goal navigation">
+	<a class="btn" href="goal1.html" title="First goal (<<)" aria-label="First goal">&lt;&lt;</a>
+	<a class="btn" href="goal1.html" title="Previous goal (<)" aria-label="Previous goal">&lt;</a>
+	<a class="btn disabled" aria-disabled="true" tabindex="-1" title="Next goal (>)">&gt;</a>
+	<a class="btn disabled" aria-disabled="true" tabindex="-1" title="Final subgoal (->)">-&gt;</a>
+	<a class="btn disabled" aria-disabled="true" tabindex="-1" title="Last goal (>>)">&gt;&gt;</a>
+<a href="Prelude.html" class = "prelude">A minimal starting Prelude</a>
+</nav>
+<script src="Patterns.js"></script>
 </body>
 </html>

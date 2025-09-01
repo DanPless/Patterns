@@ -1,16 +1,51 @@
-pre, code {
+pre, code, table, details {
     font-family: monospace;
     font-size: 16px;
 }
-pre {
-    margin-left: 6px;
+pre, table {
+    margin-left: 14px;
 }
 b {
     font-weight: bold;
 }
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.succeed {
+    color: green;
+}
+.fail {
+    color: red;
+}
+.lineLink {
+    color: orange;
+}
+.variable, .data {
+    color: blue;
+}
+
+.comment {
+    color: rgb(188, 59, 188);
+}
+.cut {
+    color: rgb(220, 220, 79);
+}
+.source {
+    color: white;
+    background-color: black;
+}
+.prelude {
+    font-size: 20px;
+}
+
 table {
-border-collapse: collapse;
-border: 3px solid #333;
+    border-collapse: collapse;
+    border: 3px solid #333;
 }
 td {
     padding: 4px;
@@ -24,39 +59,133 @@ tr.divider td {
     padding: 0 0 0 0;
     height: 0 0 0 0;
 }
+
 ul {
     list-style: none;
     margin: 0;
-    margin-left: 0.85em; /* or 1.2em for more space */
+    margin-left: 0.85em;
     padding: 0;
 }
 details {
     margin: 0;
     padding: 0;
 }
-/*— hide the original <select> once SlimSelect has enhanced it —*/
-select[data-ssid] {
-  pointer-events: none;
-  opacity: 0;
-  display: block !important;
-  position: absolute;
+.goalStack {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  z-index: 60;
 }
 
-/*— ensure each dropdown item stays on one line —*/
-.ss-list li {
-  white-space: nowrap;
+.pager {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 12px 14px 18px;
+  flex-wrap: wrap;
 }
-
-/*— let the dropdown panel grow to fit its content —*/
-.ss-content {
-  width: max-content;
+.pager--sticky {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;           /* span full window */
+  margin: 0;             /* remove inherited margins */
+  background: #fff;
+  border-top: 1px solid #333;
+  padding: 10px;         /* space inside bar */
+  box-sizing: border-box; /* keep padding inside width */
 }
-
-/*— match your original font, height, and padding —*/
-.ss-main .ss-single-selected {
+/* Anchor-as-button with subtle 3D/bevel */
+.btn {
   font-family: monospace;
-  font-size:    16px;
-  height:       32px;
-  line-height:  32px;
-  padding:      5px;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 2.25em;
+  padding: 2px 8px;
+  border: 1px solid #7f7f7f;
+  border-radius: 7px;
+  background: linear-gradient(#fafafa, #e6e6e6);
+  box-shadow:
+    0 1px 0 #fff inset,           /* inner highlight */
+    0 1px 0 rgba(0,0,0,.08);      /* outer drop */
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.2;
+  user-select: none;
+  text-align: center;
+  justify-content: center;
+}
+.btn:hover {
+  background: linear-gradient(#ffffff, #e9e9e9);
+  text-decoration: none;
+}
+.btn:active {
+  background: linear-gradient(#dedede, #f3f3f3);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.2);
+  transform: translateY(1px);
+}
+.btn.disabled {
+  pointer-events: none;      /* not clickable */
+  opacity: 0.5;              /* faded look */
+  cursor: default;           /* no hand cursor */
+}
+
+/* === Split pane between table+top code and bottom source === */
+.split {
+  display: grid;
+  grid-template-rows: 1fr 6px 1fr; /* will be set to px by JS after measuring */
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  /* Height is set dynamically by JS to fill available viewport between sticky header and footer */
+}
+
+.pane {
+  overflow: auto;            /* independent scrolling for each pane */
+  min-height: 80px;          /* avoids collapsing too small */
+}
+
+/* Bottom pane owns the colors so its whole scroll area is black */
+.pane--bottom {
+  background: #000;
+  color: #fff;
+}
+
+/* Let the source block inherit the pane colors */
+.pane--bottom .source {
+  background: transparent;
+  color: inherit;
+}
+
+.split__gutter {
+  cursor: row-resize;
+  background: linear-gradient(to bottom, #ddd, #ccc);
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  position: relative;
+}
+
+.split__gutter::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: #aaa;          /* little "handle" */
+  box-shadow: 0 1px 0 #fff inset;
 }

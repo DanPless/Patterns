@@ -3,27 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patterns</title>
+	<title>Patterns - Towers of Hanoi @rest from @middle through @start to @end -> @backEnd</title>
 	<link rel="stylesheet" href="Patterns.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal18.html" selected>Towers of Hanoi (1) from A through B to C -&gt; <b>@backEnd</b></option>
-  <option style="white-space: nowrap;" value="goal13.html#:~:text=Towers%20of%20Hanoi%20%40rest%20from%20%40middle%20through%20%40start%20to%20%40end%20-%3e%20%40backEnd">Towers of Hanoi (2 1) from B through A to C -&gt; <b>@backEnd</b></option>
-  <option style="white-space: nowrap;" value="goal1.html#:~:text=Towers%20of%20Hanoi%20%40rest%20from%20%40middle%20through%20%40start%20to%20%40end%20-%3e%20%40backEnd">Towers of Hanoi (3 2 1) from A through B to C -&gt; <b>@result</b></option>
-</select>
-<pre><code>
-Towers of Hanoi (<b>@largest</b> | <b>@rest</b>) from <b>@start</b> through <b>@middle</b> to <b>@end</b> -&gt; <b>@path</b>
-	<a href="goal19.html">Towers of Hanoi <b>@rest</b> from <b>@start</b> through <b>@end</b> to <b>@middle</b> -&gt; <b>@frontEnd</b></a>
-	<a href="goal20.html">Towers of Hanoi <b>@rest</b> from <b>@middle</b> through <b>@start</b> to <b>@end</b> -&gt; <b>@backEnd</b></a>
-	<a href="goal21.html">Append <b>@frontEnd</b> to ((<b>@largest</b> --&gt; <b>@end</b>) | <b>@backEnd</b>) -&gt; <b>@path</b></a>
+<details class="goalStack">
+	<summary><a class="succeed" href="goal18.html">Towers of Hanoi (1) from A through B to C -&gt; <b>@backEnd</b></a></summary>
+	<ul>
+		<li><a class="succeed" href="goal13.html#:~:text=Towers%20of%20Hanoi%20%40rest%20from%20%40middle%20through%20%40start%20to%20%40end%20-%3e%20%40backEnd">Towers of Hanoi (2 1) from B through A to C -&gt; <b>@backEnd</b></a></li>
+		<li><a class="succeed" href="goal1.html#:~:text=Towers%20of%20Hanoi%20%40rest%20from%20%40middle%20through%20%40start%20to%20%40end%20-%3e%20%40backEnd">Towers of Hanoi (3 2 1) from A through B to C -&gt; <b>@result</b></a></li>
+	</ul>
+</details>
+<div class="split" id="split" aria-label="Main content split" role="group">
+	<div class="pane pane--top" id="pane-top">
+<pre><code>Towers of Hanoi (<b>@largest</b> | <b>@rest</b>) from <b>@start</b> through <b>@middle</b> to <b>@end</b> -&gt; <b>@path</b>
+	<a class="succeed" href="goal19.html">Towers of Hanoi <b>@rest</b> from <b>@start</b> through <b>@end</b> to <b>@middle</b> -&gt; <b>@frontEnd</b></a>
+	<a class="succeed" href="goal20.html">Towers of Hanoi <b>@rest</b> from <b>@middle</b> through <b>@start</b> to <b>@end</b> -&gt; <b>@backEnd</b></a>
+	<a class="succeed" href="goal21.html">Append <b>@frontEnd</b> to ((<b>@largest</b> --&gt; <b>@end</b>) | <b>@backEnd</b>) -&gt; <b>@path</b></a>
 </code></pre>
 
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
+<table>
+	<tbody>
 		<tr>
-			<td style="vertical-align: top;"><a href="goal21.html"><b>@backEnd</b></a></td>
+			<td style="vertical-align: top;"><a class="variable" href="goal21.html#:~:text=%40backEnd"><b>@backEnd</b></a></td>
 			<td>
 				<details>
 					<Summary>(1 --&gt; C)</Summary>
@@ -108,28 +111,36 @@ Towers of Hanoi (<b>@largest</b> | <b>@rest</b>) from <b>@start</b> through <b>@
 			<td colspan="2"></td>
 			</tr>
 		<tr>
-			<td style="vertical-align: top;"><a href="goal19.html"><b>@frontEnd</b></a></td>
+			<td style="vertical-align: top;"><a class="variable" href="goal19.html#:~:text=%40frontEnd"><b>@frontEnd</b></a></td>
 			<td>
 					()			</td>
 		</tr>
 		<tr>
-			<td style="vertical-align: top;"><a href="goal20.html"><b>@backEnd</b></a></td>
+			<td style="vertical-align: top;"><a class="variable" href="goal20.html#:~:text=%40backEnd"><b>@backEnd</b></a></td>
 			<td>
 					()			</td>
 		</tr>
-    </tbody>
+	</tbody>
 </table>
-<pre><code>
-<a href="context1.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal17.html">&lt</a>&nbsp;&nbsp;<a href="goal18.html">||</a>&nbsp;&nbsp;<a href="goal19.html">&gt</a>&nbsp;&nbsp;<a href="goal21.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+	</div>
+	<div class="split__gutter" id="split-gutter" role="separator" aria-orientation="horizontal" aria-label="Resize panels" tabindex="0" aria-controls="pane-top pane-bottom"></div>
+	<div class="pane pane--bottom" id="pane-bottom">
+<pre class = "source"><code>Towers of Hanoi () from <b>@</b> through <b>@</b> to <b>@</b> -&gt; ()
+Towers of Hanoi (<b>@largest</b> | <b>@rest</b>) from <b>@start</b> through <b>@middle</b> to <b>@end</b> -&gt; <b>@path</b>
+	Towers of Hanoi <b>@rest</b> from <b>@start</b> through <b>@end</b> to <b>@middle</b> -&gt; <b>@frontEnd</b>
+	Towers of Hanoi <b>@rest</b> from <b>@middle</b> through <b>@start</b> to <b>@end</b> -&gt; <b>@backEnd</b>
+	Append <b>@frontEnd</b> to ((<b>@largest</b> --&gt; <b>@end</b>) | <b>@backEnd</b>) -&gt; <b>@path</b>
 </code></pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new SlimSelect({
-      select: '#patternSelector'
-    });
-  });
-</script>
+	</div>
+</div>
+<nav class="pager pager--sticky" aria-label="Goal navigation">
+	<a class="btn" href="goal1.html" title="First goal (<<)" aria-label="First goal">&lt;&lt;</a>
+	<a class="btn" href="goal17.html" title="Previous goal (<)" aria-label="Previous goal">&lt;</a>
+	<a class="btn" href="goal19.html" title="Next goal (>)" aria-label="Next goal">&gt;</a>
+	<a class="btn" href="goal21.html" title="Final subgoal (->)" aria-label="Final subgoal">-&gt;</a>
+	<a class="btn" href="goal27.html" title="Last goal (>>)" aria-label="Last goal">&gt;&gt;</a>
+<a href="Prelude.html" class = "prelude">A minimal starting Prelude</a>
+</nav>
+<script src="Patterns.js"></script>
 </body>
 </html>

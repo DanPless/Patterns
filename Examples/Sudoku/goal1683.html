@@ -3,35 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patterns</title>
+	<title>Patterns - For all @element in @rest try | @goal</title>
 	<link rel="stylesheet" href="Patterns.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal1683.html" selected>For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1647.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1607.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1606.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1154.html#:~:text=Fill%20in%20all%20%40rest%20in%20%40puzzle">Push 4 in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1153.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal777.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal740.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal700.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal699.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal251.html#:~:text=Fill%20in%20all%20%40rest%20in%20%40puzzle">Push 2 in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal250.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal212.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal211.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@11</b> <b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-  <option style="white-space: nowrap;" value="goal1.html#:~:text=Fill%20in%20all%20%40blanks%20in%20%40puzzle">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-</select>
-<pre><code>
-For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
-	<a href="goal1684.html">| <b>@goal</b></a>
+<details class="goalStack">
+	<summary><a class="fail" href="goal1683.html">For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></summary>
+	<ul>
+		<li><a class="fail" href="goal1647.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal1607.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal1606.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal1154.html#:~:text=Fill%20in%20all%20%40rest%20in%20%40puzzle">Push 4 in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal1153.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal777.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal740.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal700.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@13</b> and fill in all (<b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal699.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="fail" href="goal251.html#:~:text=Fill%20in%20all%20%40rest%20in%20%40puzzle">Push 2 in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="succeed" href="goal250.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">For all <b>@i</b> in (2 3 4) try Push <b>@i</b> in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="succeed" href="goal212.html#:~:text=For%20all%20%40element%20in%20%40rest%20try%20%7c%20%40goal">For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@11</b> and fill in all (<b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="succeed" href="goal211.html#:~:text=For%20all%20%40i%20in%20%281%202%203%204%29%20try%20Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Fill in all (<b>@11</b> <b>@13</b> <b>@14</b> <b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+		<li><a class="succeed" href="goal1.html#:~:text=Fill%20in%20all%20%40blanks%20in%20%40puzzle">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+	</ul>
+</details>
+<div class="split" id="split" aria-label="Main content split" role="group">
+	<div class="pane pane--top" id="pane-top">
+<pre><code>For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
+	<a class="fail" href="goal1684.html">| <b>@goal</b></a>
 </code></pre>
 
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
+<table>
+	<tbody>
 		<tr>
 			<td style="vertical-align: top;"><b>@i</b></td>
 			<td>
@@ -80,7 +83,7 @@ For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
 						</li>
 						<li>
 						<details>
-							<Summary><a href="goal203.html#:~:text=%40head%20%7c%20%40inter"><b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b></a></Summary>
+							<Summary><a class="class = "data"" href="goal203.html#:~:text=%40head%20%7c%20%40intermediate"><b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b></a></Summary>
 							<ul>
 								<li>
 									<b>@21</b>
@@ -118,11 +121,11 @@ For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
 						</li>
 						<li>
 						<details>
-							<Summary><a href="goal1154.html#:~:text=%7c%20%40puzzle">(2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)</a></Summary>
+							<Summary><a class="class = "data"" href="goal1154.html#:~:text=%7c%20%40puzzle">(2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)</a></Summary>
 							<ul>
 								<li>
 								<details>
-									<Summary><a href="goal1154.html#:~:text=%7c%20%40head">2 1 4 <b>@14</b></a></Summary>
+									<Summary><a class="class = "data"" href="goal1154.html#:~:text=%7c%20%40head">2 1 4 <b>@14</b></a></Summary>
 									<ul>
 										<li>
 											2
@@ -208,16 +211,15 @@ For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
 				</details>
 			</td>
 		</tr>
-    </tbody>
+	</tbody>
 </table>
 <hr/>
-<pre><code>
-For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
-	<a href="goal1985.html">For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b></a>
+<pre><code>For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
+	<a class="fail" href="goal1985.html">For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b></a>
 </code></pre>
 
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
+<table>
+	<tbody>
 		<tr>
 			<td style="vertical-align: top;"><b>@element</b></td>
 			<td>
@@ -240,7 +242,7 @@ For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
 			<td style="vertical-align: top;"><b>@goal</b></td>
 			<td>
 				<details>
-					<Summary><a href="goal1606.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></Summary>
+					<Summary><a class="class = "data"" href="goal1606.html#:~:text=Push%20%40i%20in%20for%20%40head%20and%20fill%20in%20all%20%40tail%20in%20%40puzzle">Push <b>@i</b> in for <b>@14</b> and fill in all (<b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b>) in ((2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></Summary>
 					<ul>
 						<li>
 							Push
@@ -271,7 +273,7 @@ For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
 						</li>
 						<li>
 						<details>
-							<Summary><a href="goal203.html#:~:text=%40head%20%7c%20%40inter"><b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b></a></Summary>
+							<Summary><a class="class = "data"" href="goal203.html#:~:text=%40head%20%7c%20%40intermediate"><b>@21</b> <b>@22</b> <b>@23</b> <b>@32</b> <b>@33</b> <b>@34</b> <b>@41</b> <b>@42</b> <b>@44</b></a></Summary>
 							<ul>
 								<li>
 									<b>@21</b>
@@ -309,11 +311,11 @@ For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
 						</li>
 						<li>
 						<details>
-							<Summary><a href="goal1154.html#:~:text=%7c%20%40puzzle">(2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)</a></Summary>
+							<Summary><a class="class = "data"" href="goal1154.html#:~:text=%7c%20%40puzzle">(2 1 4 <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)</a></Summary>
 							<ul>
 								<li>
 								<details>
-									<Summary><a href="goal1154.html#:~:text=%7c%20%40head">2 1 4 <b>@14</b></a></Summary>
+									<Summary><a class="class = "data"" href="goal1154.html#:~:text=%7c%20%40head">2 1 4 <b>@14</b></a></Summary>
 									<ul>
 										<li>
 											2
@@ -399,20 +401,67 @@ For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
 				</details>
 			</td>
 		</tr>
-    </tbody>
+	</tbody>
 </table>
-<hr/>
-<pre><code>
-<span style="color:red">Fail</span> <a href="context1.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal1682.html">&lt</a>&nbsp;&nbsp;<a href="goal1683.html">||</a>&nbsp;&nbsp;<a href="goal1684.html">&gt</a>&nbsp;&nbsp;<a href="goal2028.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+	</div>
+	<div class="split__gutter" id="split-gutter" role="separator" aria-orientation="horizontal" aria-label="Resize panels" tabindex="0" aria-controls="pane-top pane-bottom"></div>
+	<div class="pane pane--bottom" id="pane-bottom">
+<pre class = "source"><code>Solve 4x4 Sudoku <b>@puzzle</b>
+	Recursively find all <b>@x</b> of <b>@puzzle</b> where (Is variable <b>@x</b>) -&gt; <b>@blanks</b>
+	Fill in all <b>@blanks</b> in <b>@puzzle</b>
+<span class="comment"></span>
+<span class="comment">\ General function being tried for this problem	</span>
+Recursively find all <b>@whole</b> of <b>@whole</b> where <b>@predicate</b> -&gt; (<b>@whole</b>)
+	| <b>@predicate</b>
+Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt; <b>@list</b>
+	Accumulate <b>@whole</b> -&gt; <b>@list</b>
+		Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
+			Recursively find all <b>@item</b> of <b>@head</b> where <b>@predicate</b> -&gt; <b>@head_list</b><span class="comment">  \ Do the first</span>
+			Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span class="comment">  \ Then the rest</span>
+			Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
+		Accumulate <b>@</b> -&gt; ()
+<span class="comment"></span>
+Fill in all () in <b>@</b>
+Fill in all (<b>@head</b> | <b>@tail</b>) in <b>@puzzle</b>
+	For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@head</b> and fill in all <b>@tail</b> in <b>@puzzle</b>
+<span class="comment"></span>
+<span class="comment"></span>
+Push <b>@val</b> in for <b>@val</b> and fill in all <b>@rest</b> in <b>@puzzle</b>
+	Check constraints on <b>@puzzle</b>
+	Fill in all <b>@rest</b> in <b>@puzzle</b>
+<span class="comment"></span>
+Check constraints on <b>@puzzle</b>
+	Check rows in <b>@puzzle</b><span class="comment">              \ Check the rows</span>
+	Transpose <b>@puzzle</b> -&gt; <b>@transpuzzle</b>
+	Check rows in <b>@transpuzzle</b><span class="comment">         \ Check the columns</span>
+	Boxpose <b>@puzzle</b> -&gt; <b>@boxpuzzle</b>
+	Check rows in <b>@boxpuzzle</b><span class="comment">           \ Check the boxes</span>
+<span class="comment"></span>
+Check rows in <b>@puzzle</b>
+	Not For all <b>@row</b> in <b>@puzzle</b> try Find constraint violation in <b>@row</b>
+<span class="comment"></span>
+Find constraint violation in <b>@list</b>
+	Find all <b>@val</b> in <b>@list</b> where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b>
+	Find duplicate in <b>@filled_list</b>
+<span class="comment"></span>
+Find duplicate in (<b>@head</b> | <b>@tail</b>)
+	Element <b>@head</b> of <b>@tail</b>
+Find duplicate in (<b>@</b> | <b>@tail</b>)
+	Find duplicate in <b>@tail</b>
+<span class="comment"></span>
+Transpose ((<b>@11</b> <b>@12</b> <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> <b>@24</b>) (<b>@31</b> <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> <b>@43</b> <b>@44</b>)) -&gt; ((<b>@11</b> <b>@21</b> <b>@31</b> <b>@41</b>) (<b>@12</b> <b>@22</b> <b>@32</b> <b>@42</b>) (<b>@13</b> <b>@23</b> <b>@33</b> <b>@43</b>) (<b>@14</b> <b>@24</b> <b>@34</b> <b>@44</b>))
+Boxpose ((<b>@11</b> <b>@12</b> <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> <b>@24</b>) (<b>@31</b> <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> <b>@43</b> <b>@44</b>)) -&gt; ((<b>@11</b> <b>@12</b> <b>@21</b> <b>@22</b>) (<b>@13</b> <b>@14</b> <b>@23</b> <b>@24</b>) (<b>@31</b> <b>@32</b> <b>@41</b> <b>@42</b>) (<b>@33</b> <b>@34</b> <b>@43</b> <b>@44</b>))
 </code></pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new SlimSelect({
-      select: '#patternSelector'
-    });
-  });
-</script>
+	</div>
+</div>
+<nav class="pager pager--sticky" aria-label="Goal navigation">
+	<a class="btn" href="goal1.html" title="First goal (<<)" aria-label="First goal">&lt;&lt;</a>
+	<a class="btn" href="goal1682.html" title="Previous goal (<)" aria-label="Previous goal">&lt;</a>
+	<a class="btn" href="goal1684.html" title="Next goal (>)" aria-label="Next goal">&gt;</a>
+	<a class="btn" href="goal2028.html" title="Final subgoal (->)" aria-label="Final subgoal">-&gt;</a>
+	<a class="btn" href="goal10503.html" title="Last goal (>>)" aria-label="Last goal">&gt;&gt;</a>
+<a href="Prelude.html" class = "prelude">A minimal starting Prelude</a>
+</nav>
+<script src="Patterns.js"></script>
 </body>
 </html>

@@ -3,30 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Patterns</title>
+	<title>Patterns - Recursively find all @x of @head where (Is variable @x) -> @head_list</title>
 	<link rel="stylesheet" href="Patterns.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.css">
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<select id="patternSelector" onchange="window.location.href=this.value;">
-  <option style="white-space: nowrap;" value="goal111.html" selected>Recursively find all <b>@x</b> of 1 where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
-  <option style="white-space: nowrap;" value="goal110.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate 1 -&gt; <b>@head_list</b></option>
-  <option style="white-space: nowrap;" value="goal106.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of 1 where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
-  <option style="white-space: nowrap;" value="goal105.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate (1 <b>@32</b> <b>@33</b> <b>@34</b>) -&gt; <b>@head_list</b></option>
-  <option style="white-space: nowrap;" value="goal101.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of (1 <b>@32</b> <b>@33</b> <b>@34</b>) where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></option>
-  <option style="white-space: nowrap;" value="goal100.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate ((1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></option>
-  <option style="white-space: nowrap;" value="goal53.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></option>
-  <option style="white-space: nowrap;" value="goal6.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@blanks</b></option>
-  <option style="white-space: nowrap;" value="goal2.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) where (Is variable <b>@x</b>) -&gt; <b>@blanks</b></option>
-  <option style="white-space: nowrap;" value="goal1.html#:~:text=Recursively%20find%20all%20%40x%20of%20%40puzzle%20where%20%28Is%20variable%20%40x%29%20-%3e%20%40blanks">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</option>
-</select>
-<pre><code>
-Recursively find all <b>@whole</b> of <b>@whole</b> where <b>@predicate</b> -&gt; (<b>@whole</b>)
-	<a href="goal112.html">| <b>@predicate</b></a>
+<details class="goalStack">
+	<summary><a class="succeed" href="goal111.html">Recursively find all <b>@x</b> of 1 where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></a></summary>
+	<ul>
+		<li><a class="succeed" href="goal110.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate 1 -&gt; <b>@head_list</b></a></li>
+		<li><a class="succeed" href="goal106.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of 1 where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></a></li>
+		<li><a class="succeed" href="goal105.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate (1 <b>@32</b> <b>@33</b> <b>@34</b>) -&gt; <b>@head_list</b></a></li>
+		<li><a class="succeed" href="goal101.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of (1 <b>@32</b> <b>@33</b> <b>@34</b>) where (Is variable <b>@x</b>) -&gt; <b>@head_list</b></a></li>
+		<li><a class="succeed" href="goal100.html#:~:text=Recursively%20find%20all%20%40item%20of%20%40head%20where%20%40predicate%20-%3e%20%40head_list">Accumulate ((1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></a></li>
+		<li><a class="succeed" href="goal53.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@tail_list</b></a></li>
+		<li><a class="succeed" href="goal6.html#:~:text=Accumulate%20%40tail%20-%3e%20%40tail_list">Accumulate ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) -&gt; <b>@blanks</b></a></li>
+		<li><a class="succeed" href="goal2.html#:~:text=Accumulate%20%40whole%20-%3e%20%40list">Recursively find all <b>@x</b> of ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>)) where (Is variable <b>@x</b>) -&gt; <b>@blanks</b></a></li>
+		<li><a class="succeed" href="goal1.html#:~:text=Recursively%20find%20all%20%40x%20of%20%40puzzle%20where%20%28Is%20variable%20%40x%29%20-%3e%20%40blanks">Solve 4x4 Sudoku ((<b>@11</b> 1 <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> 3) (1 <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> 2 <b>@44</b>))</a></li>
+	</ul>
+</details>
+<div class="split" id="split" aria-label="Main content split" role="group">
+	<div class="pane pane--top" id="pane-top">
+<pre><code>Recursively find all <b>@whole</b> of <b>@whole</b> where <b>@predicate</b> -&gt; (<b>@whole</b>)
+	<a class="fail" href="goal112.html">| <b>@predicate</b></a>
 </code></pre>
 
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
+<table>
+	<tbody>
 		<tr>
 			<td style="vertical-align: top;"><b>@x</b></td>
 			<td>
@@ -64,23 +67,22 @@ Recursively find all <b>@whole</b> of <b>@whole</b> where <b>@predicate</b> -&gt
 				</details>
 			</td>
 		</tr>
-    </tbody>
+	</tbody>
 </table>
 <hr/>
-<pre><code>
-Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt; <b>@list</b>
-	<a href="goal115.html">Accumulate <b>@whole</b> -&gt; <b>@list</b></a>
+<pre><code>Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt; <b>@list</b>
+	<a class="succeed" href="goal115.html">Accumulate <b>@whole</b> -&gt; <b>@list</b></a>
 		Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
-			Recursively find all <b>@item</b> of <b>@head</b> where <b>@predicate</b> -&gt; <b>@head_list</b><span style="color:green">  \ Do the first</span>
-			Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span style="color:green">  \ Then the rest</span>
+			Recursively find all <b>@item</b> of <b>@head</b> where <b>@predicate</b> -&gt; <b>@head_list</b><span class="comment">  \ Do the first</span>
+			Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span class="comment">  \ Then the rest</span>
 			Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
 		Accumulate <b>@</b> -&gt; ()
 </code></pre>
 
-<table style="font-family: monospace; font-size: 16px">
-    <tbody id="tableBody">
+<table>
+	<tbody>
 		<tr>
-			<td style="vertical-align: top;"><a href="goal115.html"><b>@head_list</b></a></td>
+			<td style="vertical-align: top;"><a class="variable" href="goal115.html#:~:text=%40head_list"><b>@head_list</b></a></td>
 			<td>
 					()			</td>
 		</tr>
@@ -101,7 +103,7 @@ Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt;
 			<td style="vertical-align: top;"><b>@predicate</b></td>
 			<td>
 				<details>
-					<Summary><a href="goal110.html#:~:text=Is%20variable%20%40x">Is variable <b>@x</b></a></Summary>
+					<Summary><a class="class = "data"" href="goal110.html#:~:text=Is%20variable%20%40x">Is variable <b>@x</b></a></Summary>
 					<ul>
 						<li>
 							Is
@@ -121,19 +123,82 @@ Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt;
 			<td>
 					()			</td>
 		</tr>
-    </tbody>
+	</tbody>
 </table>
-<pre><code>
-<a href="context110.html">Context</a>
-<a href="goal1.html">&lt&lt</a>&nbsp;&nbsp;<a href="goal110.html">&lt</a>&nbsp;&nbsp;<a href="goal111.html">||</a>&nbsp;&nbsp;<a href="goal112.html">&gt</a>&nbsp;&nbsp;<a href="goal115.html">|&gt</a>&nbsp;&nbsp;<a href="end.html">&gt&gt</a>
+	</div>
+	<div class="split__gutter" id="split-gutter" role="separator" aria-orientation="horizontal" aria-label="Resize panels" tabindex="0" aria-controls="pane-top pane-bottom"></div>
+	<div class="pane pane--bottom" id="pane-bottom">
+<pre class = "source"><code>Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
+	Recursively find all <b>@x</b> of <b>@head</b> where (Is variable <b>@x</b>) -&gt; <b>@head_list</b><span class="comment">  \ Do the first</span>
+	Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span class="comment">  \ Then the rest</span>
+	Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
+Accumulate <b>@</b> -&gt; ()
+<hr/>Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
+	Recursively find all <b>@x</b> of <b>@head</b> where (Is variable <b>@x</b>) -&gt; <b>@head_list</b><span class="comment">  \ Do the first</span>
+	Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span class="comment">  \ Then the rest</span>
+	Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
+Accumulate <b>@</b> -&gt; ()
+<hr/>Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
+	Recursively find all <b>@x</b> of <b>@head</b> where (Is variable <b>@x</b>) -&gt; <b>@head_list</b><span class="comment">  \ Do the first</span>
+	Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span class="comment">  \ Then the rest</span>
+	Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
+Accumulate <b>@</b> -&gt; ()
+<hr/>Solve 4x4 Sudoku <b>@puzzle</b>
+	Recursively find all <b>@x</b> of <b>@puzzle</b> where (Is variable <b>@x</b>) -&gt; <b>@blanks</b>
+	Fill in all <b>@blanks</b> in <b>@puzzle</b>
+<span class="comment"></span>
+<span class="comment">\ General function being tried for this problem	</span>
+Recursively find all <b>@whole</b> of <b>@whole</b> where <b>@predicate</b> -&gt; (<b>@whole</b>)
+	| <b>@predicate</b>
+Recursively find all <b>@item</b> of <b>@whole</b> where <b>@predicate</b> -&gt; <b>@list</b>
+	Accumulate <b>@whole</b> -&gt; <b>@list</b>
+		Accumulate (<b>@head</b> | <b>@tail</b>) -&gt; <b>@accum_list</b>
+			Recursively find all <b>@item</b> of <b>@head</b> where <b>@predicate</b> -&gt; <b>@head_list</b><span class="comment">  \ Do the first</span>
+			Accumulate <b>@tail</b> -&gt; <b>@tail_list</b><span class="comment">  \ Then the rest</span>
+			Append <b>@head_list</b> to <b>@tail_list</b> -&gt; <b>@accum_list</b>
+		Accumulate <b>@</b> -&gt; ()
+<span class="comment"></span>
+Fill in all () in <b>@</b>
+Fill in all (<b>@head</b> | <b>@tail</b>) in <b>@puzzle</b>
+	For all <b>@i</b> in (1 2 3 4) try Push <b>@i</b> in for <b>@head</b> and fill in all <b>@tail</b> in <b>@puzzle</b>
+<span class="comment"></span>
+<span class="comment"></span>
+Push <b>@val</b> in for <b>@val</b> and fill in all <b>@rest</b> in <b>@puzzle</b>
+	Check constraints on <b>@puzzle</b>
+	Fill in all <b>@rest</b> in <b>@puzzle</b>
+<span class="comment"></span>
+Check constraints on <b>@puzzle</b>
+	Check rows in <b>@puzzle</b><span class="comment">              \ Check the rows</span>
+	Transpose <b>@puzzle</b> -&gt; <b>@transpuzzle</b>
+	Check rows in <b>@transpuzzle</b><span class="comment">         \ Check the columns</span>
+	Boxpose <b>@puzzle</b> -&gt; <b>@boxpuzzle</b>
+	Check rows in <b>@boxpuzzle</b><span class="comment">           \ Check the boxes</span>
+<span class="comment"></span>
+Check rows in <b>@puzzle</b>
+	Not For all <b>@row</b> in <b>@puzzle</b> try Find constraint violation in <b>@row</b>
+<span class="comment"></span>
+Find constraint violation in <b>@list</b>
+	Find all <b>@val</b> in <b>@list</b> where (Not Is variable <b>@val</b>) -&gt; <b>@filled_list</b>
+	Find duplicate in <b>@filled_list</b>
+<span class="comment"></span>
+Find duplicate in (<b>@head</b> | <b>@tail</b>)
+	Element <b>@head</b> of <b>@tail</b>
+Find duplicate in (<b>@</b> | <b>@tail</b>)
+	Find duplicate in <b>@tail</b>
+<span class="comment"></span>
+Transpose ((<b>@11</b> <b>@12</b> <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> <b>@24</b>) (<b>@31</b> <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> <b>@43</b> <b>@44</b>)) -&gt; ((<b>@11</b> <b>@21</b> <b>@31</b> <b>@41</b>) (<b>@12</b> <b>@22</b> <b>@32</b> <b>@42</b>) (<b>@13</b> <b>@23</b> <b>@33</b> <b>@43</b>) (<b>@14</b> <b>@24</b> <b>@34</b> <b>@44</b>))
+Boxpose ((<b>@11</b> <b>@12</b> <b>@13</b> <b>@14</b>) (<b>@21</b> <b>@22</b> <b>@23</b> <b>@24</b>) (<b>@31</b> <b>@32</b> <b>@33</b> <b>@34</b>) (<b>@41</b> <b>@42</b> <b>@43</b> <b>@44</b>)) -&gt; ((<b>@11</b> <b>@12</b> <b>@21</b> <b>@22</b>) (<b>@13</b> <b>@14</b> <b>@23</b> <b>@24</b>) (<b>@31</b> <b>@32</b> <b>@41</b> <b>@42</b>) (<b>@33</b> <b>@34</b> <b>@43</b> <b>@44</b>))
 </code></pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/2.12.1/slimselect.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new SlimSelect({
-      select: '#patternSelector'
-    });
-  });
-</script>
+	</div>
+</div>
+<nav class="pager pager--sticky" aria-label="Goal navigation">
+	<a class="btn" href="goal1.html" title="First goal (<<)" aria-label="First goal">&lt;&lt;</a>
+	<a class="btn" href="goal110.html" title="Previous goal (<)" aria-label="Previous goal">&lt;</a>
+	<a class="btn" href="goal112.html" title="Next goal (>)" aria-label="Next goal">&gt;</a>
+	<a class="btn" href="goal115.html" title="Final subgoal (->)" aria-label="Final subgoal">-&gt;</a>
+	<a class="btn" href="goal10503.html" title="Last goal (>>)" aria-label="Last goal">&gt;&gt;</a>
+<a href="Prelude.html" class = "prelude">A minimal starting Prelude</a>
+</nav>
+<script src="Patterns.js"></script>
 </body>
 </html>

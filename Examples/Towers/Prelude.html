@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A minimal starting Prelude</title>
+	<link rel="stylesheet" href="Patterns.css">
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<pre class = "source"><code>Append () to <b>@x</b> -&gt; <b>@x</b>
+Append (<b>@head</b> | <b>@tail</b>) to <b>@x</b> -&gt; (<b>@head</b> | <b>@intermediate</b>)
+	Append <b>@tail</b> to <b>@x</b> -&gt; <b>@intermediate</b>
+<span class="comment"></span>
+Not | <b>@predicate</b>
+	| <b>@predicate</b>
+	|| <b>@</b><span class="comment">          \ Cut after predicate success</span>
+	||| ()<span class="comment">        \ And then hit the hard fail</span>
+Not | <b>@</b>
+<span class="comment"></span>
+One way match of <b>@template</b> -&gt; <b>@pattern</b>
+	Match <b>@pattern</b>
+		Match <b>@template</b>
+		||| ()
+<span class="comment"></span>
+Is variable <b>@v</b>
+	One way match of <b>@v</b> -&gt; ()
+	One way match of <b>@v</b> -&gt; (())
+<span class="comment"></span>
+Element <b>@x</b> of (<b>@x</b> | <b>@</b>)
+Element <b>@x</b> of (<b>@</b> | <b>@tail</b>)
+	Element <b>@x</b> of <b>@tail</b>
+<span class="comment"></span>
+Find all <b>@</b> in () where <b>@</b> -&gt; ()
+Find all <b>@x</b> in (<b>@head</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; (<b>@head</b> | <b>@tail2</b>)
+	Try <b>@head</b><span class="comment">  \ Need to separate the value @x to avoid binding</span>
+		Try <b>@x</b>
+			| <b>@predicate</b>
+	|| <b>@</b><span class="comment">  \ Cut so that unification failure on output doesn't trigger next rule</span>
+	Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>
+Find all <b>@x</b> in (<b>@</b> | <b>@tail</b>) where <b>@predicate</b> -&gt; <b>@tail2</b>
+	Find all <b>@x</b> in <b>@tail</b> where <b>@predicate</b> -&gt; <b>@tail2</b>
+<span class="comment"></span>
+For all <b>@element</b> in (<b>@element</b> | <b>@</b>) try | <b>@goal</b>
+	| <b>@goal</b>
+For all <b>@element</b> in (<b>@</b> | <b>@rest</b>) try | <b>@goal</b>
+	For all <b>@element</b> in <b>@rest</b> try | <b>@goal</b>
+||| ()
+</code></pre>
+</body>
+</html>
